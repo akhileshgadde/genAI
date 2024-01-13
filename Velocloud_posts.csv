@@ -1,0 +1,677 @@
+post_id,subreddit,created_utc,selftext,post_url,post_title,link_flair_text,score,num_comments,upvote_ratio
+ok6jqx,Velocloud,1626276099.0,"For those of you who are stuck behind an MSP but manage your own networks, I'm interested in knowing what the better MSP's are out there who aren't interested in just closing a ticket as fast as possible.
+
+What do you like about your MSP and what do you dislike?
+
+What are your troubleshooting experiences like?
+
+Do they have any real contact with Velocloud engineers? (ie are they just basically relaying messages or do they actually believe you when you've proven there's a bug or issue?)",https://www.reddit.com/r/Velocloud/comments/ok6jqx/who_is_your_msp/,Who is your MSP?,,4,14,0.84
+rhj3be,Velocloud,1639630908.0,"Details here:  [VMSA-2021-0028.3 (vmware.com)](https://www.vmware.com/security/advisories/VMSA-2021-0028.html) 
+
+Looks like versions 4.x and higher, including the VCO.",https://www.reddit.com/r/Velocloud/comments/rhj3be/velocloud_appears_to_be_affected_by_log4j/,Velocloud appears to be affected by Log4J,,3,0,0.81
+lkcwx2,Velocloud,1613392871.0,"There are two options for HA, standard and Enhanced. Enhanced does not need L2 switch on WAN.
+
+Which option is recommended by Dell? I can see bgp support over ha link come with a cost as below. I think in this case standard is better. Is anyone have an idea or experience on this?
+
+Routes are not synced between the active and the standby Edges. Therefore, in the above scenario, if there is a failover and a standby Edge becomes active, the BGP daemon on the newly active edge will establish a new neighborship with the same BGP peer.",https://www.reddit.com/r/Velocloud/comments/lkcwx2/velocloud_high_availability_options/,Velocloud High Availability Options,,4,15,1.0
+zqyh4l,Velocloud,1671567475.0,"Anyone have experience working with branch to branch vpn?  I need to disable the branch 2 branch vpn but only allow certain source IPs to create tunnels to all branches.  In otherwords, I need branch to branch connectivity but only if sourced from a certain IP address or Velo device.  Is there another way to do this without using pofile  isolation or enabling b2b vpn for the entire enterprise?",https://www.reddit.com/r/Velocloud/comments/zqyh4l/branch_to_branch_vpn/,Branch to Branch VPN,,3,2,1.0
+yd9nym,Velocloud,1666716796.0,"A team used a blank cloud-init OVA to create a VCE VM on ESXi. 
+
+Is there a way to log onto the device (vcadmin/\*blank\*) and then use commands to set the parameters that would've been set via the GUI? Only other option I see is to start over with a new VM.",https://www.reddit.com/r/Velocloud/comments/yd9nym/configure_vce_from_command_line/,Configure VCE from command line,,3,7,1.0
+tgg0jd,Velocloud,1647539639.0,"When I'm doing Firmware upgrade in a HA Pair, are both devices going down or it will upgrade the primary and then the stand by? Is there any documentation?",https://www.reddit.com/r/Velocloud/comments/tgg0jd/ha_firmware_upgrade_velocloud/,HA Firmware Upgrade - Velocloud,,3,2,1.0
+tfq9q4,Velocloud,1647458075.0,"Howdy all,
+
+My IT team has been running into an issue where we are notified of circuit issues only when the circuit completely drops, but there is no way to see if a circuit is experiencing packet loss or latency without going into the QoE tab from the Edge in question.
+
+Is there a tool or guide on how I could go about monitoring these circuits in real time via 3rd party? Ideally, I'd like to see if a circuit is down, latency, packet loss, jitter, bandwidth, and throughput -- basically everything the edge monitoring area has, but without having to search it after-the-fact. Something free would be ideal (not *completely* opposed to paid services, but free is nice), and it would be nice to see everything at a glance on ""one page"".
+
+Is there any method you all could/would recommend?
+
+Thanks in advance!",https://www.reddit.com/r/Velocloud/comments/tfq9q4/monitoring_circuits_from_velocloud_via_3rd_party/,Monitoring circuits from VeloCloud via 3rd party software,,3,6,1.0
+qf1snx,Velocloud,1635111326.0,Hello. What's the best for optimising an organisation o365 traffic ? Just connectting the Velocloud box to 2 ISPs & creating a business policy selecting o365 as application ?,https://www.reddit.com/r/Velocloud/comments/qf1snx/velocloud_configuration_for_optimising_office365/,Velocloud Configuration for optimising Office365,,3,9,1.0
+mrk3la,Velocloud,1618509195.0,"Is it possible to SSH to a velocloud edge, and using that connection SSH to a local switch on site  (L2 only switch, no ip routing)
+
+I do recall having ssh'ed to an edge before, but cant for the life of me remember what was used for credentials.",https://www.reddit.com/r/Velocloud/comments/mrk3la/ssh_to_edge_then_to_device/,"SSH to edge, then to device?",,3,3,1.0
+mpkhan,Velocloud,1618253334.0,"Question, we have about 100 HA edge pairs on our SDWAN network.  They are currently on 3.3.2-P1 and I want to upgrade them to 3.4.5.  Our VCO is set with the option to reduce load on the VCO and as such it will only process config changes per edge once every 10 minutes.  If I push the upgrade out to all my edges at once, does this mean it only begins the upgrade process on one edge every 10 minutes?  I would think this would mean such an upgrade would take several hours to complete on all of our edges.  
+
+Has anyone experienced issues when pushing a firmware upgrade out all at once to a large number of edges?",https://www.reddit.com/r/Velocloud/comments/mpkhan/edge_firmware_upgrades/,Edge firmware upgrades,,3,2,1.0
+mgije8,Velocloud,1617118020.0,My ISP changed our WAN IPs and now my edge at a location is offline.  Is there a way to log into the edge locally from a laptop at the site to change the WAN IPs and bring it back online or do I need to factory default the edge and activate with the new IPs?,https://www.reddit.com/r/Velocloud/comments/mgije8/logging_into_offline_edges/,Logging into offline edges,,3,4,1.0
+lfz24t,Velocloud,1612863897.0,"Hi,
+
+I have to replace Mikrotik router that has a few configuration configured. 
+
+* Subinterface for two vlan... ok
+* Two static route... ok
+* DHCP server... naaah, partially ok.
+
+I can not find option to configure several IP addresses bound to specific MAC address (IP reservation) in LAN segment (Phones, printers and few specific hosts)
+
+Does anyone know how to accomplish this?",https://www.reddit.com/r/Velocloud/comments/lfz24t/velocloud_sdwan_620_vmware_dhcp_ip_reservation/,Velocloud SD-WAN 620 VMWARE - DHCP IP reservation,,3,8,1.0
+kbdx7b,Velocloud,1607729230.0,"We have a company that provides some managed services to just some of our servers.  They do this via a site-to-site VPN that only allows them access to certain IP addresses.  They have a Cisco ASA on their end. 
+
+I need to change the IPs I'm pointing to, and am considering moving it off our ASA and onto Velocloud via a ""Non-Velocloud Site"" configuration.
+
+It seems straightforward for normal branches, but I only want to allow this company access to certain IP address ranges between two of our locations (our main data center and our backup data center), since they manage just a small percentage of our servers.
+
+When configuring it for an ASA, the VCO lists an option called ""Custom Source Subnets"".  The docs aren't real clear on what this does.  I'd also likely use the Firewall feature to limit their access on the data center Edge as well, but an additional control at the ""front door"" (VPN setup) would be helpful as well.
+
+Any experience with using Velocloud IPSEC with ""business partner"" style setups?   Does the use of the Custom Source Subnets feature allow me some level of control over which subnets they can reach, or am I completely off base on what that does?",https://www.reddit.com/r/Velocloud/comments/kbdx7b/nonvelocloud_site_to_managed_service_providers_asa/,Non-Velocloud Site to managed service provider's ASA,,3,3,1.0
+k9dzt4,Velocloud,1607464534.0,Is it possible to change the HA port from LAN1 to LAN5 or anything other than LAN1 on edge 520 with E-HA or HA design?,https://www.reddit.com/r/Velocloud/comments/k9dzt4/change_the_ha_port_on_velocoud_edge_520/,Change the HA port on VeloCoud edge 520.,,3,2,1.0
+il7g1c,Velocloud,1599055696.0,What model do you use in the data center?,https://www.reddit.com/r/Velocloud/comments/il7g1c/anyone_using_these_in_the_data_center/,Anyone using these in the data center?,,3,4,1.0
+epva9f,Velocloud,1579234699.0,"Looks like Velocloud is starting to publish its documentation on the VMWare docs site. Here is the documentation for the current release.
+
+ [https://docs.vmware.com/en/VMware-SD-WAN-by-VeloCloud/3.3/velocloud-partner-guide-33/GUID-E6C345C6-BB85-47A8-98AC-5DB0578041DB.html](https://docs.vmware.com/en/VMware-SD-WAN-by-VeloCloud/3.3/velocloud-partner-guide-33/GUID-E6C345C6-BB85-47A8-98AC-5DB0578041DB.html)",https://www.reddit.com/r/Velocloud/comments/epva9f/publicly_available_link_for_release_notes_and/,Publicly available link for Release Notes and Documentation (Finally) !!,,3,1,1.0
+yue7c3,Velocloud,1668373512.0,"hello everyone, 
+
+&#x200B;
+
+I am having an odd issue in Eve-ng/Pnetlab, I have created VCO and VCG and they are communicating perfectly.
+
+now when I make a new edge and activate it, everything goes well, but as soon as the edge is activated and gets configuration it gets disconnected . I tried with [5.0.0.2](https://5.0.0.2) and 5.0.1 images.
+
+the funny thing is that everything was working, I had to reboot eve and then I had to redo VCO, VCG and i got this odd issue, I tried on seperate lab and I got the exact same issue.
+
+&#x200B;
+
+is there some configuration that i am missing in VCG or VCO ?
+
+&#x200B;
+
+Can anyone help ?
+
+Thanks",https://www.reddit.com/r/Velocloud/comments/yue7c3/velocloud_edge_get_disconnected_after_activatation/,Velocloud Edge get disconnected after activatation,,2,7,1.0
+ysoa94,Velocloud,1668203518.0,,https://www.reddit.com/r/Velocloud/comments/ysoa94/any_training_to_start_with/,any training to start with?,,2,1,1.0
+y7wov0,Velocloud,1666167046.0,"Hello, i'm new in this working environment and i'm trying to activate a new pgw which i had deployed in testing center. The issue is that i'm not able to reach the VCO for activation.
+
+I got ""VcCommunicationError, socket.error, [Errno 110], Connection timed out""
+
+Do you have any tips? 
+Cabling and configurations should be fine
+IP is white listed on FW",https://www.reddit.com/r/Velocloud/comments/y7wov0/velocloud_pgws_activation/,Velocloud - PGW's Activation,,2,4,1.0
+xxnxgz,Velocloud,1665111736.0,"Just curious if anyone is using another solution or product to get alerts/emails based on QOE thresholds? I am also looking for a way to monitor and get alerts for the tunnels to other edges, hubs, gateway. We have had situations where even though one of the internet circuits  is up and running clean on the Edge with multiple ISPs, the tunnels to other edges fail over that circuit and we had no idea until manually checked tunnels via edge diagnostics.",https://www.reddit.com/r/Velocloud/comments/xxnxgz/proactive_monitoringalerting_of_overlay_tunnels/,Proactive monitoring/alerting of overlay tunnels and QOE metrics?,,2,7,1.0
+x86ghs,Velocloud,1662560622.0,"Hi everyone,
+
+can we something build something alternative to MPLS VPLS using velocloud sdwan? 
+
+Here is what I meant by VPLS in my understanding. 
+
+ **The virtual private LAN service (VPLS) is an MPLS-based Ethernet point-to-multipoint (P2MP) L2VPN service provided over a public network**. VPLS ensures that geographically isolated user sites can communicate over MANs and WANs as if they were on the same LAN. VPLS is also called transparent LAN service (TLS)",https://www.reddit.com/r/Velocloud/comments/x86ghs/build_something_alternative_to_mpls_l2vpnvpls/,build something alternative to MPLS L2VPN/VPLS using velocloud sdwan?,,2,2,1.0
+x43vxs,Velocloud,1662131278.0,"Hey guys,
+
+I'm looking online for some learning materials for Velo. I'm finding a lot of SD-WAN related material that feels more like a sales pitch rather than the nitty gritty under the hood. 
+
+I'm brand new to Velo and pretty much new to SD-WAN.
+
+Can anyone point me at some materials they found useful?
+
+Cheers.",https://www.reddit.com/r/Velocloud/comments/x43vxs/velocloud_learning_materials/,Velocloud learning materials.,,2,3,1.0
+wz8lwz,Velocloud,1661621648.0,"We have migrated to SDWAN recently and are seeing very slow and unstable SMB file transfers between our branch and hub sites. In each site we use 2 circuits (internet and private circuit) with HA and use the VCE's for branch to branch and branch to hub communication. We have tested the circuits they are fine. We have Other applications seem to be working ok as far as we can see.
+
+One of the branch sites that is having the issue has 2 x 540 Edge VCE's (enhanced HA). The hub site has 2 x 640 VCE's (standard HA). Any ideas what this could possibly be?
+
+And the VCE's in HA perform load balancing (DMPO). Can this affect any windows applications and file sharing?",https://www.reddit.com/r/Velocloud/comments/wz8lwz/slow_smb_file_transfers/,Slow SMB file transfers,,2,2,1.0
+vrzmk3,Velocloud,1657032601.0,"Hi All ,
+
+i just create my lab to test VMware SDWAN .
+
+the issue remote diag not working on edge.",https://www.reddit.com/r/Velocloud/comments/vrzmk3/remote_diag/,remote diag,,2,4,1.0
+vngp8b,Velocloud,1656511746.0,Is there a way to view the peak max Throughput (utilization and not just bandwidth) on velocloud edges? i can see the live throughput under Link Status in the overview tab. However I'd like to see the peak utilization over a period of time (for example the past week) on a velocloud edge. Is this possible?,https://www.reddit.com/r/Velocloud/comments/vngp8b/how_to_view_peak_max_throughput_on_velocloud_edges/,How to view peak max Throughput on velocloud edges,,2,4,1.0
+v5x88x,Velocloud,1654500361.0,"Hi
+
+Just want to find out if anyone has this issue and if there is a way to resolved it.
+
+we have Velo SD-wan edges in out environment and we having trouble trying to ge the netflow stats for the internet wan interfaces on the edges. so far the Lan netflow stat are working just fine but the wan netflow stats are not showing any information. out netflow collector is a solarwinds box",https://www.reddit.com/r/Velocloud/comments/v5x88x/velo_cloud_sdwan_netlfow/,Velo Cloud SD-WAN Netlfow,,2,1,1.0
+ume1yc,Velocloud,1652172020.0,"Hi guys,
+
+I’m running 4.2.2 and trying to snmp poll my boxes.  I have 10 using the same profile. Strangely I can snmpwalk only one of them. I presume I can snmpwalk edge devices from behind the HUB ? I have setup SNMP access as per the doco.
+
+Cheers
+
+Matt",https://www.reddit.com/r/Velocloud/comments/ume1yc/snmp_read_issues/,SNMP read issues,,2,4,0.76
+u7c1dh,Velocloud,1650393128.0,"Hey Everyone, Simple question here. Does enabling DCHP on interface cause services restart? My company is very sensitive to any changes and I know reconfiguring the interface causes a service restart but does enabling DCHP have the same affect.
+
+ [VMware Knowledge Base](https://kb.vmware.com/s/article/60247)",https://www.reddit.com/r/Velocloud/comments/u7c1dh/does_enabling_dchp_on_interface_cause_services/,Does enabling DCHP on interface cause services restart?,,2,2,0.76
+sii8ry,Velocloud,1643785583.0,"Hi,  
+with firmware version starting from 4.3 there is an option of adding and configuring loopback interface. I'm planning to remove old cisco router which has gre tunnel with Loopback interface configured as a source. I can't find similar option on Velo. I would like it to use loopback interface as a source for all services?  
+
+
+Unfortunately, the connected subnet I'm connecting through with ISP doesn't have internet access, so I have to use loopback interface  
+
+
+Was somebody facing similar issue?",https://www.reddit.com/r/Velocloud/comments/sii8ry/velocloud_edge_loopback_interface/,VeloCloud edge - Loopback interface,,2,2,1.0
+sdfy4p,Velocloud,1643229927.0,What are the different options for connecting avelocloud SDWAN network into Azure?  Is Azure's VWAN a non-celocloud app that connects with the VCO using a VPN versus installing into Azure the Velo-cloud virtual Edge?,https://www.reddit.com/r/Velocloud/comments/sdfy4p/velocloud_connectivity_options_into_azure/,Velocloud connectivity options into Azure,,2,3,1.0
+qwqlyt,Velocloud,1637244785.0,"Hi guys 
+I am looking to apply a global firewall policy via the branch office profile. I want to apply inbound to each branch.  Configuring the firewall looks straight forward but it's not clear how I control the direction.  I basically want to prevent the branches from accessing each other. 
+
+Thanks in advance 
+
+Matt",https://www.reddit.com/r/Velocloud/comments/qwqlyt/velo_profile_firewall_traffic_direction/,Velo profile firewall traffic direction,,2,4,1.0
+qaq3gn,Velocloud,1634574154.0,"Hello Everyone,
+
+I have a use case that needs to be configured on VeloCloud Edge 610.
+
+That is, The Firewall has many IPsec tunnels to other branch sites, cloud security services, and customer sites, etc.
+
+Now, the same firewall has to be deployed behind the SD-WAN, And, the IPsec VPN tunnels need to be terminated on the Firewall itself. How can this be done without disrupting the existing tunnels?
+
+Can the SD-WAN Edge act as a transit device (that is to work at Layer 2 without IP addresses) ? or One-to-One NAT and Port-Forwarding should be the approach?
+
+Thank you.",https://www.reddit.com/r/Velocloud/comments/qaq3gn/velocloud_vmware_sdwan_as_transit/,VeloCloud (VMware SD-WAN) as Transit?,,2,2,1.0
+pmq6t6,Velocloud,1631441912.0,,https://www.reddit.com/r/Velocloud/comments/pmq6t6/securing_edge_internet_breakout/,Securing edge Internet breakout,,2,3,1.0
+oy22g1,Velocloud,1628110338.0,"I'm trying to figure out how the ""DNS Settings"" under Network Services works.  The section in the Admin Guide is scant.
+
+We currently hand out DNS settings with DHCP from a central DHCP server pool, which point to our internal DNS servers (which also resolve Internet DNS hosts too, obviously).  However, I'm considering enhancing our cloud-based security by forwarding DNS through it so it has that visibility too (e.g. for DNS Blackholing). Yes, we could do that with a forwarder on our main internal DNS servers, but we'd lose the source IP address of the requestor in that case.
+
+Is the idea that you create a Private DNS entry for your internal domains pointing to your internal servers, then point your clients to the Edge LAN IP address?  In other words, is the intent of these DNS Settings for the Edge to act as a DNS proxy?
+
+Thanks.",https://www.reddit.com/r/Velocloud/comments/oy22g1/dns_services_private_dns/,DNS Services / Private DNS,,2,1,1.0
+olod23,Velocloud,1626464453.0,"Hi.  
+I have created this Discord server to exchange information and get help in regards to VMware SD-WAN products.  
+Please feel free to join us.  
+[https://discord.gg/ap3ahm98](https://discord.gg/ap3ahm98)",https://www.reddit.com/r/Velocloud/comments/olod23/velocloud_discord_server/,Velocloud Discord Server,,2,1,1.0
+o52j4x,Velocloud,1624301753.0,"Has anyone ever seen an issue with users getting an IP from a different vlan?  We have a site on Velocloud, with the SVIs/gateways configured on the edges in which we are seeing users who should get an IP in the USER subnet range instead getting IPs from our guest wireless range.
+
+The USER vlan hands out IPs using a relay address that points back to the remote DHCP servers.  The guest wifi subnet is handled localy on the edge using it's own configured DHCP.
+
+The affected users' PCs are plugged into switchports configured with a single access vlan for the USER subnet.  I cannot figure out how they would get a guest wifi IP rather then a USER vlan IP.
+
+Additionally, the remote DHCP servers were confirmed reachable, and they are not holding onto expired IP leases.",https://www.reddit.com/r/Velocloud/comments/o52j4x/wrong_ips_within_a_vlan/,Wrong IPs within a vlan,,2,1,1.0
+n6vszu,Velocloud,1620385024.0,,/r/networking/comments/n6tkkx/a_question_already_asked_but_version_2021_sdwan/,A question already asked but version 2021 : SDWAN Actor choice,,2,1,1.0
+n3oszz,Velocloud,1620019991.0,"Hi,
+
+Is anyone aware how the QoE score is calculated and while measuring the latency and jitter what destination is it being tested for?",https://www.reddit.com/r/Velocloud/comments/n3oszz/qoe_calculations/,QOE calculations,,2,5,1.0
+mmv00j,Velocloud,1617897844.0,I’m looking for an explanation of how VeloCloud connects edges/sites. Is it done by default? Is there a VPN table/route table i can look at? If not how to i configure hub & spoke in the VCO? Or should i do edge clustering?,https://www.reddit.com/r/Velocloud/comments/mmv00j/sdwan_hub_spoke_and_clustering/,"SD-Wan, hub & spoke and clustering.",,2,1,1.0
+m2ck1g,Velocloud,1615420053.0,"I am testing a following topology. However, dynamic tunnels between are not being established. Meaning even with dynamic branch to Branch enabled traffic flows always and only via VCG (causing higher, non optimal latency). 
+
+Branch A - Private user defined wan, SDWAN Service Reachable Enabled (cause I can reach Internet through MPLS), Velo A WAN GE3 10.10.10.1, upstream router NATs one to one 10.10.10.1 <> 172.16.10.1. Further, after reaching DC via MPLS, that 172.16.10.1 is NATed by DC Firewall with public ip before exiting to internet. 
+
+Branch B has everything the same and is present on same Private MPLS Network . Obviously WAN IP Addresses are different. So, Velo B WAN GE3 10.20.20.1 is one to one NATed on 172.16.20.1. further, after reaching DC Vvia MPLS, that 172.16.20.1 is  NATed on public ip by DC Firewall towards the Internet.
+
+ZTP works as expected since MPLS has a default in it. And Branch velos are able to establish static tunnels towards VCG.
+
+Even if I generate branch to Branch traffic, Dynamic Branch to brach tunnels are not being established between A and B. What I see with debugging is that branch A is trying to establish tunnel with GE3 ip addresses of the branch B. but since branch b is behind nat, tunnel is not coming up. 
+
+I know that it's not typical MPLS deployment. However, I'm just wondering if its possible to have on MPLS behind double nat.",https://www.reddit.com/r/Velocloud/comments/m2ck1g/dynamic_branchtobranch_w_private_wan_and_double/,Dynamic Branch-to-Branch w/ Private WAN and Double NAT,,2,4,1.0
+m2chea,Velocloud,1615419842.0,what is the best practice wen it comes to configuring Overlay QoS CoS Mapping in business policy? should we leave the values that come by default for the mapping matrix and after observation make changes as necessary? just wanted to know the thinking behind the cos mapping matrix values for service class and priority,https://www.reddit.com/r/Velocloud/comments/m2chea/qos_best_practices/,QoS Best Practices,,2,5,1.0
+lw82h3,Velocloud,1614707444.0,How intrusive is it to run a WAN interface bandwidth test for a VCE within the Test and Troubleshoot tab under WAN Link Bandwidth Test?  Is this an intrusive test?,https://www.reddit.com/r/Velocloud/comments/lw82h3/wan_bandwidth_testing/,WAN Bandwidth testing,,2,1,1.0
+lw7zzf,Velocloud,1614707256.0,"Question, what does it mean when I go into Test and Troubleshoot on the Orchestrator, then run the Interface Status and see my Speed and Duplex showing N/A Mbps?",https://www.reddit.com/r/Velocloud/comments/lw7zzf/wan_interface_speed_and_duplex/,WAN Interface Speed and Duplex,,2,4,1.0
+lj7gkt,Velocloud,1613245030.0,"To be clear at the start. I am familiar in networking and I am sure that  this Edge device works like any other router, BUT I really have problem with one branch location end Edge on that site.
+
+Currently, there is a mikrotik router that only has two static route (one default to NG firewall for internet acces via **Vlan X**, and other static route to branch office Lite via **Vlan Y**.
+
+Mikrotik has two interfaces configured. One to the LAN and second subinterface with those two vlan. Lan is not a problem.
+
+WAN is. WAN IPs are private addresses, and there are p2p/30
+
+Problem is that when I configured that subinterface on Edge, it can not go to the internet to Velocloud Orchestrator. NG firewall has no any logs from edge, so I am 100% sure that there is no connection to the NG Firewall. Currently, Edge is connectet to the internet as any other host from Lan side, behind the mikrotik.
+
+Is there something that I missed in configuration of subinterface?  
+PS. version 3.4.1  
+",https://www.reddit.com/r/Velocloud/comments/lj7gkt/subinterface_setup_on_velocloud_edge/,Sub-interface setup on velocloud edge,,2,9,1.0
+kxya7n,Velocloud,1610729017.0,"I've scoured the velo web site and couldn't find these answers, so apologies if I'm asking silly questions.
+
+1) Is the throughput license calculated by summing up the upload and download bandwidth of all the underlay accesses?
+
+2) And is it an ""honor"" type system that is ""trued up"" from reporting only.  ie; there's no policing mechanism on the edge device to rate limit the total throughput.  
+
+
+TIA",https://www.reddit.com/r/Velocloud/comments/kxya7n/calculating_throughput_for_licenses/,Calculating throughput for licenses,,2,9,1.0
+ktfl5v,Velocloud,1610151381.0,"Hi All,
+
+Still learning about the velocloud feature functionality as a noob.  I was watching some tutorials about velo edges measuring the link qualities and was it wasn't clear if each edge tracked the link quality to ALL other edges it's peered with (if in a fully mesh configuration or partial mesh)?  Or does it only measure one ""hub"" point that is configured?",https://www.reddit.com/r/Velocloud/comments/ktfl5v/quality_link_measurements/,Quality Link Measurements,,2,3,1.0
+kia5mx,Velocloud,1608659184.0,"Hi There,  
+
+
+I've searched the google machine without luck so thought I would try this avenue. We have a Velocloud implementation for a couple of our remote offices. Recently I have enabled MFA in Office 365 but I have it setup to NOT challenge users when they are on the internal network. This works great for all standard offices, but the Velocloud offices seem to appear to Office365 as a Velocloud gateway IP rather than the public IP of the internet service at each site. I am wondering if anyone else has faced this, and how you would go about carving up policies based on network location when they could be routed through any Velocloud gateway dynamically and I am not able to try whitelisting all of velocloud as internal!",https://www.reddit.com/r/Velocloud/comments/kia5mx/mfa_and_and_trusted_network_locations_with/,MFA and and Trusted Network Locations with Velocloud Gateways for SaaS,,2,2,1.0
+jndnvu,Velocloud,1604421734.0,"Howdy folks,
+
+Forgive my ignorance, while I know enough to setup a decent home network, I'm afraid I'm a bit out of my league when it comes to more complicated network solutions.  My company is going to be implementing Velocloud network devices as we have transitioned many of our employees to work from home.  Being as I work for a hospital, security and privacy are important.  However my wife is a teacher and is also working from home intermittently and requires a certain level security to protect student privacy.
+
+My Current setup is simple with a Modem and a separate router providing both wired, and wireless connectivity.  If I connect the Velocloud device to the router will that device maintain an isolated connection to my work's WAN and be unable to connect to (or be connected to) any other device on my home network?  Basically I just want to make sure that patient data on my work PC can't be compromised if somehow one of my home PCs or other devices becomes compromised (not that I'm planning to let that happen).
+
+Basically I want to ensure that the Velocloud will leave my home network alone save for providing a connection to my work's WAN for only those devices connected to the Velocloud device.
+
+As a follow up, if my wife's school district decides to implement something similar, can two of these kinds of devices be connected to the same router/modem without interfering with each other, even though they are now providing connections to two different WANs?",https://www.reddit.com/r/Velocloud/comments/jndnvu/privacy_questions_regarding_velocloud/,Privacy questions regarding Velocloud,,2,6,1.0
+j5jibv,Velocloud,1601904957.0,"Hi, I am new with velocloud platform, a I would very appreciate if u share some knowledge sites with me, where I can find more about Edge 620 series, best practice, how and where to use, well known ""child diseases"" ...",https://www.reddit.com/r/Velocloud/comments/j5jibv/literatures_and_knowladge/,literatures and knowladge,,2,4,1.0
+iyanvc,Velocloud,1600869627.0,"I am not sure if this is the correct forum for this, but I appreciate any help you all can offer. 
+
+We have a VeloCloud 520 positioned between the incoming ISP connection and our own firewall/router. We keep losing internet a few times a day. Each time it is out for 5-10 minutes. 
+
+The ISP is showing their hardware has been up throughout these outages. A third party provider manages the VeloCloud, and they are showing power loss to the VeloCloud. Each time it goes out, it always comes back up as if it initiated a reboot. The internet always gets restored, but the outage is more annoying than anything. 
+
+We have moved the VeloCloud and ISP hardware from a UPS battery backup to separate outlets for testing. We changed all Ethernet cables attached to the VeloCloud. We replaced the ISP hardware, and replaced the VeloCloud. The problem has persisted throughout this. The same thing is happening each time. The internet goes down and coincides with the VeloCloud showing an outage. 
+
+Any thoughts or suggestions are greatly appreciated. Thanks!",https://www.reddit.com/r/Velocloud/comments/iyanvc/velocloud_520_restarting_itself/,VeloCloud 520 Restarting Itself,,2,4,1.0
+frj09x,Velocloud,1585537193.0,"Anyone tried alone enterprise v2 API ?
+
+The error log is vague and the API documentation isn’t clear and have no example.",https://www.reddit.com/r/Velocloud/comments/frj09x/clone_enterprise_api_issues/,Clone enterprise API issues ?,,2,1,1.0
+f0g2ey,Velocloud,1581106168.0,"So I’m designing a velocloud deployment where the inet circuits are new and dedicated to the VCEs both at the branches and the DC. I want nothing between these with the VCEs locked firm to the IP addresses of the branches relying on the VCO registration and endpoint acls securing the tunnel. 
+
+The current standard this is replacing is Cisco router to router over mpls with the traffic filtered at the dc post edge leaves. That is the security approved standard for our non-pci required compliance.  We also have some branches on ipsec tunnels that land in a vpn firewall to the edge leaves. 
+
+Now however the security manager wants to place the backend asa in path between the VCEs even though it’s encapsulated and tighter security. His argument is this is inet versus mpls but we are only allowing tunnels from know endpoint IPs that have to be know serial/Mac addresses in the VCO. 
+
+My concern is the ASA context will cause issues with the dmpo and algorithms that may want to asymmetrical route if it’s better performance. I feel this is a critical risk to our already tight timeline. 
+
+Thoughts?",https://www.reddit.com/r/Velocloud/comments/f0g2ey/need_a_sanity_check_my_security_group_want_to/,"Need a sanity check, my security group want to place an ASA in path between my VCEs",,2,2,1.0
+dp5fy9,Velocloud,1572435065.0,"**New Features** 
+
+·  SNMP SD-WAN Edge MIB                            
+
+·  LAN-Side NAT                            
+
+·  Syslog                            
+
+·  Network Overview Dashboard                            
+
+**Feature Enhancements in the following areas** 
+
+·  Firewall VNF                            
+
+·  NetFlow                            
+
+·  Cloud Security Service                            
+
+·  Port Forwarding                            
+
+·  802.1p Support                            
+
+·  Single Sign-On                            
+
+·  DHCP Relay                            
+
+·  Routing Enhancements",https://www.reddit.com/r/Velocloud/comments/dp5fy9/release_notes_332/,Release Notes 3.3.2,,2,8,1.0
+dljsd3,Velocloud,1571759312.0,"Is there a public way to get the latest release notes? As far as I know, the latest release is 3.3.1-0925",https://www.reddit.com/r/Velocloud/comments/dljsd3/release_notes/,Release Notes,,2,2,1.0
+dl6ju8,Velocloud,1571690307.0,I was waiting for that a long time. Hopefully we will have interesting discussions.,https://www.reddit.com/r/Velocloud/comments/dl6ju8/finaly/,Finaly....,,2,0,1.0
+zpvmg5,Velocloud,1671466127.0,"Hi,  I know it may be an overkill but it is possible to add LTE failover to a Standard VCE-HA  system?  In principle all ports have to be mirror in Standard HA but how about the LTE Failover connection?  My understanding is that I cannot use the same port on both the Active and Standby edge for Backup Failover.  I'm including a picture to illustrate this situation.  
+
+https://preview.redd.it/wfpy3wrzov6a1.png?width=1270&format=png&auto=webp&v=enabled&s=ab994922340aa0fad19e535bf461320695892bab",https://www.reddit.com/r/Velocloud/comments/zpvmg5/standard_vceha_lte_failover_is_it_possible/,Standard VCE-HA + LTE Failover - Is it possible?,,1,3,1.0
+ysfg69,Velocloud,1668184359.0,"Hi all,
+
+I am looking to connect my Hub to a remote Fortigate VPN, and in doing so allow the remote host behind the Fortigate reach all spokes off my Velo hub.
+
+What is the best way to do this? 
+
+Non SD-WAN Destinations via Gateway
+
+or
+
+Non SD-WAN Destinations via Edge
+
+&#x200B;
+
+Cheers",https://www.reddit.com/r/Velocloud/comments/ysfg69/vpn_from_fortigate_to_hub/,VPN from Fortigate to Hub,,1,1,1.0
+ygda6o,Velocloud,1667029014.0,"I'm hoping you folks can help with a scalability/sizing question. I'm researching whether or not VMware SD-WAN suits my branch-to-branch use case and came across something in the doc ""SD-WAN Edge Performance and Scale Data"" that really confuses me. 
+
+They mention:
+""the maximum number of tunnels between any two Edges or an Edge and a Gateway is 16... Each WAN link (public or private) an Edge uses establishes two tunnels with another Edge or Gateway: one inbound, and one outbound. For example, if an Edge had four WAN links and connected to another Edge with four WAN links, that would be a total of 16 tunnels.""
+
+From the perspective of a single Edge, surely if you had four WAN interfaces with two tunnels per interface (to another Edge) you would only be terminating 8 tunnels on each device, right? Do any of you know how VMware calculate this to be 16, know this doc to be incorrect or perhaps know of any other documentation that explains this more clearly?
+
+My use case is two WAN ports for each Edge device. Would branch-to-branch traffic require 4 tunnels or 8 to be terminated on each Edge?",https://www.reddit.com/r/Velocloud/comments/ygda6o/edge_sizing_number_of_tunnels_between_each_edge/,Edge sizing & number of tunnels between each Edge,,1,3,1.0
+y31z83,Velocloud,1665675820.0,"I have a hub site with an Edge 610 and a single WAN connection.  We have vehicles with LTE/wifi hotspots (which I also control) that are usually at this location, especially at night when the primary WAN connection is most likely to go down. Is it possible to configure the Edge to connect to the vehicle wifi hotspot as a backup WAN connection?
+
+Related question:  on the Edge Overview tab of the Edge configuration page, under "" Edge Specific Overrides & Additions"" / Services, Wireless says ""No"" and is grayed out.  Is a wireless WAN ability an upgrade feature?  Thanks from a new member!",https://www.reddit.com/r/Velocloud/comments/y31z83/possible_to_use_builtin_wifi_as_a_wan_link/,Possible to use built-in wifi as a WAN link?,,1,2,1.0
+xxeuh0,Velocloud,1665086733.0,"I have a spoke site that needs to backhaul to a hub site, both edges are online and have formed tunnels with the gateways. Within the site edge profile I have specified the hub edge and on the hub edge profile it's configured as a hub, this should just work and has on multiple sites..now it just shows a blank box in the list paths...",https://www.reddit.com/r/Velocloud/comments/xxeuh0/edge_not_forming_tunnel_with_specified_hub/,Edge not forming tunnel with specified HUB,,1,6,1.0
+xfb0t4,Velocloud,1663283752.0,"Hi all,
+
+I am looking to setup a VPN from a Fortigate firewall to my hub Edge. However, I don't want this VPN accessible from the spokes. From what i see, the config needs to be applied to the profile I have applied to the Edge Hub and spokes. 
+
+Wondering if there's a way to terminate this VPN so that it doesn't apply to the spokes.
+
+I'm new to Velo so apologies if this is very straight forward.
+
+Any help greatly appreciated.
+
+Thanks.",https://www.reddit.com/r/Velocloud/comments/xfb0t4/non_sdwan_destination_vpn_from_hub_edge_only/,Non SD-WAN destination VPN from Hub Edge only.,,1,1,1.0
+xdd4q7,Velocloud,1663088973.0,"Is it possible to use the VMware site as a Hub für non SD-WAN locations?  
+I have two ipsec tunnels but i do not get traffic from one to the other location.",https://www.reddit.com/r/Velocloud/comments/xdd4q7/traffic_between_two_non_sdwan_destinations_via/,"Traffic between two ""Non SD-WAN Destinations via Gateway""",,1,3,1.0
+xdanrm,Velocloud,1663083090.0,"We have 2 x 610 VCE's in an enhanced HA configuration connected to a 150 Mbps internet link and 20 Mbps MPLS link. The links to the LAN and the HA link between the 2 VCE's are 1 gbps. What will the total WAN throughput of the Enhanced HA (2x VCE's) Edge 610 be?
+
+170 Mbps?
+
+what if you have a 1Gbps internet and 1Gbps MPLS link?
+
+https://preview.redd.it/hm7dtl6gann91.png?width=512&format=png&auto=webp&v=enabled&s=79e0f6a09f7700ce626887db68db4e0e6ca80d13",https://www.reddit.com/r/Velocloud/comments/xdanrm/total_throughput_enhanced_ha_2x_vces_edge_610/,Total throughput Enhanced HA (2x VCE's) Edge 610,,1,6,1.0
+xcl4is,Velocloud,1663009227.0,"Hello fellow members,
+
+I have NBN link connected to the Veloedge. VeloEdge seems working find for few days with the link until one day it went offline. Not sure why? any thoughts?
+
+&#x200B;
+
+Troubleshooting I have done so far.
+
+1. Reboot Velos - Done
+2. NBN connection - No issues
+3. Used the LAN Cable to connect with computer - computer works fine gets public IP from NBN.
+4. Physical cable - tested.
+
+&#x200B;
+
+Additional Info: 
+
+\- Running enhanced HA on the site. Active VeloEdge has Port X for another service  while Standby Veloege has Port Y for NBN.
+
+\- Interface status shows Link detected as YES but no IP it shows there. 
+
+&#x200B;
+
+Any clues? Or anyone aware of any way to reboot only standby device?",https://www.reddit.com/r/Velocloud/comments/xcl4is/veloedge_detects_link_but_not_connecting/,VeloEdge detects link but not connecting,,1,2,1.0
+wqqi43,Velocloud,1660746734.0,"Hello everyone,
+
+I am experiencing 1 issue for which I cannot find any reason and would like your opinions.
+
+I am running Enhanced HA and have 1 active & the other standby Velo devices. 1 WAN link is connected with Active device while the 2nd MPLS Connection needs to be connected to both velo edges.
+
+As soon as I connect 3rd link with velo edge with PE Router,  Velo Edge brings connects to hub, bring the interface up for a minute but then start having issues. The Active Velo Edge green led goes white and the PE Router becomes unresponsive. Cannot SSH into it anymore. It stays like this until I remove the cable from PE Router.
+
+Not sure what is the issue. The underlay reachibility is there & therefore, it initially ables to make bring the interface up.
+
+Wondering if someone have experienced this before or have any clue why it is happening? Happy to reply some additional info if you have any.
+
+&#x200B;
+
+\*\*\*\*\*UPDATE\*\*\*\*\*Hello all, I should have been more clear in my post but after looking at the questions commonly asked, let me update it here.
+
+Why Choose E-HA :Company choose it before I joined it. So its now a standard. However many people are under the impression that the E-HA works when you have 1 uplink from each veloedge(active + Standby). While this is true, we can also have a common uplink that will connect with both velo edges. This is possible and we have been doing it for larger sites. So it will be like this
+
+Active Velo Edge:  
+Port X : Internet/Uplink  A  
+Port Y : Internet/Uplink B 
+
+Standby Velo Edge:  
+Port Y : Internet/Uplink B  
+ Port Z : Internet/Uplink C
+
+The benefit is HA link  will only be used for Port Z tunnel/traffic since we have limitation of bandwidth on HA link depending on model/specs.
+
+Resolution: At this site, the MPLS connection is based on 4G. The 4G MPLS router is up but do not have enough signal strength. When a velo edge connects to orchestrator & tunnels created, it automatically does the speedtest. At this stage, the 4G router (cellular interface esp)  goes down since I believe it is not able to handle the amount of traffic. The primary veloege LED goes amber where it tries to reach to hub/orchestrator. I am in a process of getting an external antenna for the site & hoping it will resolve this issue.
+
+I am using 680s for this site. I hope I have answered all of your questions.",https://www.reddit.com/r/Velocloud/comments/wqqi43/velocloud_enhanced_ha_issue/,VeloCloud Enhanced HA - Issue,,1,8,1.0
+wkrzne,Velocloud,1660119946.0,"Hi all,
+
+Does anyone know, after deploying on-Prem VCO, how VMware checks all licenses if they are valid? Does VCO connecting to some cloud resource for verifying the licenses? 
+
+I know that VCO on-prem have trial term about 3 month, and after that you can't deploy any settings to the edges. The question is how VMware check the valid VCO/Licences.
+
+Thank you",https://www.reddit.com/r/Velocloud/comments/wkrzne/vco_onprem_registration/,"VCO on-Prem, Registration",,1,0,1.0
+wastot,Velocloud,1659062074.0,"I have an old 500 series edge that I have been using to experiment.
+Is there a way I can find and replace the factory image using a SCP server?",https://www.reddit.com/r/Velocloud/comments/wastot/changing_factory_image_for_velocloud_edge/,Changing factory image for velocloud edge,,1,4,1.0
+vmcy25,Velocloud,1656385714.0,"Hi guys,  
+I want to create a non SDWAN destination to a palo firewall.  The purpose of this is to create a business policy to route specific web traffic via the palo.  It looks straight forward in the doco.  Am I on the right track here in terms of the purpose of a non sdwan destination setup ?
+
+Cheers",https://www.reddit.com/r/Velocloud/comments/vmcy25/non_sdwan_destination/,Non SDWAN destination,,1,2,1.0
+vls8b1,Velocloud,1656325109.0,"Hi guys, 
+I want to install a second HUB at a second DC.  I have a Velo box suitable to terminate all the tunnels but wondering if there are any other considerations when deploying a second HUB ?
+
+Cheers 
+
+Juan",https://www.reddit.com/r/Velocloud/comments/vls8b1/second_hub/,Second HUB,,1,2,1.0
+vl1wte,Velocloud,1656239878.0,"Hello folks, 
+One of my customer with 20 remote sites and fully meshed with the HQ using all ASA and checkpoint. 
+Customer want to go velocloud moving forward, 
+ Can someone walk me through migration steps, what are pre-requisites, does velo edge router will replace the firewall per site, 
+
+Note: i m new to velocloud world, so please forgive my ignorance",https://www.reddit.com/r/Velocloud/comments/vl1wte/migration_from_traditional_to_sdwan/,Migration from traditional to sdwan,,1,6,1.0
+vaion1,Velocloud,1655027582.0,"Hi all,
+
+I needed to add another routed interface to my (4.2.2) Velo for a second internal network. 
+
+I created a new VLAN, set a spare interface to routed and assigned the Vlan.  I also unchecked the wan overlay box.  I added the IP directly to the interface rather than on the Vlan.  
+
+My wan interfaces each dropped, and a failure to the other unit occurred. I also see a reference to a loop.   Funny thing is I didn’t even plug this new interface in ? 
+I note the HA interface remains down. 
+
+Any idea what’s going on here ? Maybe I should have set the IP in the Vlan instead of directly on the interface ? 
+
+Any clues here would be appreciated.
+
+Cheers",https://www.reddit.com/r/Velocloud/comments/vaion1/adding_a_routed_interface_freaked_ha_pair/,Adding a routed interface freaked ha pair completely.,,1,5,1.0
+v1xgaa,Velocloud,1654023521.0,"Hi everyone,
+
+Trying to figure out the VeloCloud PoP footprint for a client who is kicking tires on SD-WAN service.  
+Anywhere where I can find exact locations list + info on if this stuff if VMware's own infra or 3rd party like AWS or other CSPs...",https://www.reddit.com/r/Velocloud/comments/v1xgaa/velocloud_pop_cloud_footprint/,VeloCloud PoP cloud footprint,,1,8,1.0
+u5vct6,Velocloud,1650226943.0,"I'm looking for an option of manualy steering of LTE band - aggregation on 510-Lte.  
+I want to change for a specific band's to manualy switch to specific BTS in neighborhood.  
+I tried via CLI - but i didnt find any linux binary which may help.",https://www.reddit.com/r/Velocloud/comments/u5vct6/lte_band_aggregation_on_edge/,LTE Band aggregation on Edge,,1,0,1.0
+sv6sxs,Velocloud,1645152278.0,"Hello guys, i have a question related to the Velo Super GW concept.We are running service provider deployment model with partner GWs which have handoff into the MPLS. Usually for the inter-region routing between the customers we have dynamic b2b vpn enabled or the traffic  is flowing over the MPLS through the different gateways. I have noticed however that we have several customers with super gateways and want to understand how exactly is this GW chosen in service provider deployment.Canit be specified somewhere or it is again assigned automatically from the orchestrator based on the location  on all the edges in the network..
+
+&#x200B;
+
+Thanks",https://www.reddit.com/r/Velocloud/comments/sv6sxs/velocloud_service_provider_super_gw_assigment/,Velocloud service provider Super GW assigment question.,,1,0,1.0
+su7n0q,Velocloud,1645048777.0,"Does the velo edge have a log for DHCP?  I'm trying to solve a problem where DHCP isn't handing out addresses, despite being configured on the sub-interface of my LAN port.  Thanks.",https://www.reddit.com/r/Velocloud/comments/su7n0q/dhcp_leases/,DHCP Leases,,1,3,1.0
+soywa5,Velocloud,1644471622.0,"Hi guys,
+
+Got a weird one.  I have a bunch of Edge 510-LTE 4.2.1 boxes. Fairly standard setup.  
+
+Every week or so, random boxes direct traffic in the business policy just stops working and I can no longer ping the WAN.  If I change direct to multipath in the business policy it's all good but I still cannot ping the WAN.  If I reboot the box direct traffic works again for another week or so.  Anyone else had this experience ?
+Sounds like a bug. 
+
+Thanks",https://www.reddit.com/r/Velocloud/comments/soywa5/direct_traffic_breaks/,Direct traffic breaks,,1,9,1.0
+sgev6o,Velocloud,1643565878.0,I have a site with dual VCE's set for HA.  If I want to remove one of the VCE's what is the process?  I assume I move the cabling over to the same ports on the remaining VCE and then uncheck the HA box.  Is there more to it?,https://www.reddit.com/r/Velocloud/comments/sgev6o/migrating_from_a_dual_ha_vce_configuration_to_a/,Migrating from a dual HA VCE configuration to a single VCE,,1,2,1.0
+sge8sf,Velocloud,1643564186.0,"I have two LAN interfaces configured for Layer 3 routing using OSPF to form neighborships with directly connected interfaces on two Layer-3 routed ports on Nexus switches.  So GE2  to one Nexus *(both using an IP within the same /32 subnet)* and GE5 to the other Nexus *(both using an IP within the same /32 subnet).*
+
+When I go into Test and Troubleshooting within the VCO and run the redistributed OSPF routes tool, The results show to which particular OSPF neighbor a listed subnet/route is being redistributed into OSPF *(presumably being redistributed from the VCG routing protocol)* and advertised to.
+
+But a few say ""any"".  Does this mean it is being advertised to both OSPF neighbors *(i.e it is being advertised out both GE2 and GE5)*?
+
+I ask because I have a situation where the Nexus connected back to GE5 is missing several subnets which the Nexus connecting back to GE2 is receiving.  And neither Nexus is doing any inbound *(our outbound)* OSPF route filtering.  That said, I did notice that when I open up GE5 and toggle advanced OSPF options, the Route Advertisement default action is ignore.  Does this mean GE5 is not advertising any routes to it's Nexus neighbor and if so then why do I see some subnets/routes showing the next hop of GE5?",https://www.reddit.com/r/Velocloud/comments/sge8sf/ospf_first_hop_any/,"OSPF First Hop ""any""",,1,1,1.0
+sdgbuk,Velocloud,1643230894.0,we have a dual VCE in HA deployment in which each VCE appliance has a layer-3 routed LAN connection to one member of a cisco nexus 9k switch VPC pair.  Nexus 1 gets all known ospf routes from VCE 1 but Nexus 2 is not getting advertisements for one of the OSPF advertised subnets from VCE 2.  Neither switch is filtering what they learn via OSPF.  Any thoughts on why Nexus 2 is not learning the subnet in question from VCE 2?,https://www.reddit.com/r/Velocloud/comments/sdgbuk/vce_not_advertising_all_ospf_learned_routes/,VCE not advertising all ospf learned routes,,1,1,1.0
+s2ced2,Velocloud,1642010066.0,"Hi All,
+
+I have the following situation. We have a core switch with static route point to a FW in LAN.
+
+This static route prefix is redistributed in OSPF on the core switch (OE2 route).
+
+Velocloud Edge is connected to this core switch and it is an OSPF neighbor with the same switch.
+
+It learns this static route prefix. Static route prefix is in the Edge\`s routing table (OE2 route). It is in the OSPF database. All seems correct.
+
+When I check OFC the prefix is present but under ""Preferred VPN Exits"" it\`s written ""none"".
+
+If I click on edit box in front of the prefix I can choose the edge.
+
+Why it is not selecting automatically the edge for preferred VPN exit in overlay.
+
+If it is none then edges in other sites won\`t receive the prefix at all.",https://www.reddit.com/r/Velocloud/comments/s2ced2/velocloud_issue_with_redistribution_of_external/,Velocloud Issue with redistribution of external routes to overlay,,1,6,1.0
+s1a180,Velocloud,1641897400.0," Hello, 
+
+I would like to know the steps to follow to block Spotify and Netflix sites from the VeloCloud console ?
+
+&#x200B;
+
+Thanks",https://www.reddit.com/r/Velocloud/comments/s1a180/how_to_block_netflix_and_spotify_on_velocloud/,How to block Netflix and Spotify on Velocloud ?,,1,3,1.0
+qqrbko,Velocloud,1636539682.0," Hello all,
+
+This question would have been asked already, but I did not find anything about it online.
+
+How do you activate VeloCloud Edge in a MPLS only branch site with no internet link?
+
+Do we have to provision the edge first in the VCO, configure Edge specific settings by creating user-defined overlay, enable Service Reachability in the WAN settings, and then send the activation email along with configuration to the site contact?
+
+because the normal approach shows an ""VeloCloud Orchestrator Unreachable"" error during activation.
+
+ 
+
+* The VCO is cloud hosted.
+* VC Edge at data center has hybrid links and are configured as Hub device. It backhauls the Gateway and Orchestrator services for the other edges.
+* At another MPLS only site, earlier they had used internet to activate the edge and later removed the internet link.
+* This is a new edge that will be joined to the network (MPLS only site).
+* I wanted to know how do we activate the VeloCloud Edge without Internet.
+
+&#x200B;
+
+Thank you",https://www.reddit.com/r/Velocloud/comments/qqrbko/mpls_only_network_velocloud_edge_activation/,MPLS only network VeloCloud Edge activation,,1,4,1.0
+qnhklf,Velocloud,1636137346.0,"I have a single VCE with the lan interfaces GE1 and GE2 configured as routing interfaces that each have an OSPF adjacency down to a pair of core switches (Nexus 9ks).
+
+Earlier I saw that while traffic egressed from Core-1 to GE1 the traffic was returning down to Core-2 via GE2.
+
+Within the Route Advertisement section under toggle advanced ospf, GE1 was configured with the default action of *advertise*
+
+However I found GE2 was configured with the default action of *ignore.*
+
+Is this why GE1 was used for routed egress and GE2 used for routed ingress?
+
+I enabled GE2 with the default action advertise and it looks good so far.  But when I initially set the path cost on GE1 to 1 and GE2 to 10, I lost connection to my Core-2 which had the adjacency to GE2.  It came back when I moved the path cost for GE2 back to 1 matching that of GE1. ",https://www.reddit.com/r/Velocloud/comments/qnhklf/vce_ospf_inbound_route_learning_and_route/,VCE OSPF Inbound Route Learning and Route Advertisement,,1,1,1.0
+qlcqmm,Velocloud,1635883107.0,"In test and troubleshoot, what is the difference between List OSPF Routes and Show OSPF Route Table?
+
+I have a single VCE device with a connection to two cores on the LAN side but we are setting the LAN interfaces on the VCE (GE1 and GE2) as routed interfaces that route via OSPF to the cores - GE1 has an adjacency with Core-1 and GE2 has an adjacency with Core-2.
+
+When I run *List OSPF Routes* I see routes to both cores but Core-2 shows it's routes as TRUE and CORE-1 routes as FALSE.  But under *Show OSPF Route Table* I see both core switch IPs listed for routes to each LAN subnet.
+
+And we lose all OSPF connectivity if I shut the VCE interface GE2 going to CORE-2.  SHouldn't traffic reroute over GE1 to CORE-1?",https://www.reddit.com/r/Velocloud/comments/qlcqmm/list_ospf_routes_vs_show_ospf_route_table/,List OSPF Routes vs Show OSPF Route Table,,1,1,1.0
+qi3b1f,Velocloud,1635476860.0,,https://www.reddit.com/r/Velocloud/comments/qi3b1f/trying_to_find_out_how_much_i_could_sell_a/,Trying to find out how much I could sell a Velocloud edge 5XO 520 -AC any suggestions? It’s working but used.,,1,3,1.0
+qhz51z,Velocloud,1635462976.0,"I have a single VCE with GE1 and 2 configured as routed interfaces.  They are directly connected down to a pair of Nexus 9k's in vPC.  But the interfaces they go to are also routed interfaces.  
+
+VCE routed interface GE1 ip 10,1,1,1/30 goes to Core-1 routed interface Eth1/1 ip 10,1,1,2/30.
+
+VCE routed interface GE2 ip 10,1,1,5/30 goes to Core-2 routed interface Eth1/1 ip 10,1,1,6/30.
+
+VCE and both cores are OSPF neighbors.
+
+I see all traffic coming off the overlay being routed to core 2 by the VCE.
+
+I check the VCE OSPF route table and see all GE2 says TRUE under advertise column
+
+I see all GE1 says FALSE under advertise column
+
+Does this mean it has both route but only uses the GE2 route to route traffic into the LAN?",https://www.reddit.com/r/Velocloud/comments/qhz51z/ospf_routing/,OSPF routing,,1,1,1.0
+q96ah3,Velocloud,1634364916.0,,https://www.reddit.com/r/Velocloud/comments/q96ah3/vdsl_in_sfp/,VDSL in SFP,,1,2,1.0
+q6ung7,Velocloud,1634069652.0,Is there a way to have a single VCE trunked back to two switches?  Do VCE's support port-channels?,https://www.reddit.com/r/Velocloud/comments/q6ung7/multiple_trunks_to_a_single_edge/,Multiple trunks to a single edge,,1,2,1.0
+opnfe3,Velocloud,1626988960.0,"Hi.  
+Does anyone knows the convergence time after a failure on the active device in standard HA configuration.  
+
+
+I was testing on my Lab environment, I shutdown the active device triggering a fail-over thus the secondary device took the active role.  
+I recover the communication  after 1 minute, I was pinging the LAN interface of the VCE and I lost 15 pings on the windows command line.  
+
+
+1 minute to recover the communication after a failure I think is a lot of time, is that the expected behavior?  
+
+
+Thanks.",https://www.reddit.com/r/Velocloud/comments/opnfe3/ha_convergence_time/,HA convergence time,,1,7,1.0
+om8bna,Velocloud,1626541845.0,"Hi, i’m forming my opinion regarding regarding if sd-wan is enterprise ready or not.
+
+Like to hear your experience or impression.
+
+Regards,",https://www.reddit.com/r/Velocloud/comments/om8bna/enterprise_ready_or_not/,Enterprise ready or not?,,1,2,1.0
+om80lh,Velocloud,1626540909.0,"Hi, with version 4.4.0 “my vmware” breaks tradition  by no longer provide all vco/gateway and edge “firmware” for download but only the edge 4.4.0. The release was about SASE.
+I did not notice a single case where newer  version edge was released without matching vco & gateways software.
+
+Is there a VCO & gateway 4.4.0 planned? Or is this an end of “regular” vco/gateways, and is the SASE stuff to take over.
+If that is the case it would explain why no vco/gateway 4.4.0 is downloadable within current contract.
+
+Regards",https://www.reddit.com/r/Velocloud/comments/om80lh/vcogateway_440_software_missing/,Vco/gateway 4.4.0 software missing?,,1,4,1.0
+om7iuw,Velocloud,1626539344.0,"Hi, by choosing a proprietary sd-wan as Velocloud, i’m curious if you care/aware about the vendor lock-in, and with that what your disaster plan looks like .
+Switching to another sd-wan provider (including all automation/monitoring and stuff)  seems major task. And having two sd-wan  solutions at same time looks very costly for the purpose.
+
+Any thoughts?
+
+Regards",https://www.reddit.com/r/Velocloud/comments/om7iuw/disaster_recovery_vendor_lockin/,Disaster recovery & vendor lock-in,,1,0,1.0
+om715x,Velocloud,1626537762.0,"Hi, searched a few times on my vmware to find Velocloud (sd-wan by vmware) user forum. But looks non-existent.
+Am i right? No Velocloud user forum on vmware? Or did i just lost in my vmware jungle?
+
+Regards,",https://www.reddit.com/r/Velocloud/comments/om715x/my_vmware_velocloud_user_forum/,My Vmware Velocloud user forum?,,1,0,0.67
+om4xa6,Velocloud,1626530848.0,"Hi, i’m curious who has experience with using api (only) based on provided swagger specfile and would like to share information. Hope we can learn and improve.
+
+We’re using openapi and velocloud swagger to generate go library we use in our custom written terraform provider.
+We build some experience with that (and using it) but also lots of issues due to incomplete swagger specfile & openapi generation issues (looks not a features are fully supported)
+
+
+I’m interested in your experiences using api (only) but share a bit experience of my own as well.
+
+
+As it seems the vco is NOT based on the specfile, but looks like swagger specfile is generated afterwards and swagger specfile is not corrrect/complete etc. Noticed wrong/inconsistent datatypes, missing items, missing api call definitions, empty definitions and even a circular definition…etc.
+
+With velocloud api team it feels like no great enthusiasm ( big big understatement) to actually fix things (swiftly). Need to push for ticket id after reporting issue (and fix). But no way to track these yourself, never feedback when fixed (if fixed at all)…enough said…you get the point….
+
+The apiv2  looks promising, but may take many years  to fully complete (estimated on progress i see, i estimate morel likely 5 years then the 1 year they announce).
+So we can’t wait for that.
+
+So what is your experience?
+Can/do you use api only to manage all resources?
+Do you generate library from specfile?
+What tooling you use to generate library to be used in your mngt software
+What do you think of spec file (after actually using it) (quality/usability)
+Do you manage all resources based on api fully from specfile? 
+Do you need to reverse engineer the api from vco all the time? (As opposed reading/using specfile)
+Do you manage resources from desired state (from git)?
+Do you manage resource and not keep track of state? (For example deploy an edge in manual created profile, and manage by hand after that)
+Anyone has experience/opinion on the many cross referencing to other objects used, and  quality on how that is documented?
+Any experience/opinion on resources which id’s are generated in vco after deployment, but need that id to deploy. (Circular dependency, no way to straight one go deployment)
+What is your experience when reporting api issues, like incomplete, missing, inconsistent . … definitions in swagger specfile?
+If you entirely trust on api (swagger specfile), what kind of business you’re in (small/middle/enterprise) ?
+
+Like to hear from you.
+
+
+Regards,
+
+Arjan",https://www.reddit.com/r/Velocloud/comments/om4xa6/sharing_experience_with_using_api_only_based_on/,Sharing experience with using api (only) based on provided swagger specfile,,1,3,0.99
+ncdeso,Velocloud,1621011600.0,"When I go into Test and Troubleshoot in the Orchestrator to check the Arp Cache at one site, I am seeing a crazy large number of ARP entries.  As this is the WAN interface, I would expect to only see the ISP Gateway IP and MAC.  Why would I see a large list of private AND public IPS/MACs?",https://www.reddit.com/r/Velocloud/comments/ncdeso/multiple_arp_entries_on_vce_wan_interface/,Multiple ARP entries on VCE WAN interface,,1,5,1.0
+nbdhpl,Velocloud,1620901682.0,"Hi, I had have issue to see all applications running through the edge and it is solved by removing proxy server (users were attached to the proxy)
+
+Now I can see all application (google, youtube and so on) but size (total bytes, bytes received are 0, and byte send) are on few megabytes level. Except **SD-WAN Control** and **SD-WAN Management** application that has 10 times more size that first next (youtube) application.
+
+&#x200B;
+
+What is the problem?",https://www.reddit.com/r/Velocloud/comments/nbdhpl/sd_wan_application_size_problem/,SD WAN application size problem,,1,5,1.0
+mpcu0e,Velocloud,1618230628.0,"Are there any pre-request for sd-wan in order to see all aplication in **Top Applications.** After 2 months, all I can see are  **SD-WAN Control,  SD-WAN Management,  Domain Name Service,  Session Traversal Utilities for NAT.** All other apps are in kb size.",https://www.reddit.com/r/Velocloud/comments/mpcu0e/velocloud_sdwan_prerequest_for_top_applications/,Velocloud sd-wan - pre-request for Top Applications,,1,3,1.0
+m6cyiy,Velocloud,1615912009.0,"Hello,
+
+We use 2 Verizon USB modems and are seeing [very high data usage from the SD-WAN Control](https://i.imgur.com/L0LsDvP.png). Does anyone know how we can cut this number a bit? It's basically using half of our monthly data just for that.
+
+Thank you.",https://www.reddit.com/r/Velocloud/comments/m6cyiy/data_usage_high/,Data usage high?,,1,7,1.0
+m6bxt2,Velocloud,1615909354.0,"Hi,
+
+I was trying to make private overlay on point-to-point link between two VCE. It does not seem to work between two virtual VCE  following the steps described in the Velocloud Admin guide which says it is possible private overlay over pont-to-point link.",https://www.reddit.com/r/Velocloud/comments/m6bxt2/point_to_point_private_overlay/,point to point private overlay,,1,5,1.0
+lw8maq,Velocloud,1614708824.0,Which Bandwidth Measurement setting should I use on a 50 or 100 M ckt?  Slow Start or Burst Mode?,https://www.reddit.com/r/Velocloud/comments/lw8maq/best_bandwidth_measurement_setting_for_50m_ckt/,Best Bandwidth Measurement setting for 50M ckt,,1,3,1.0
+lsi0tn,Velocloud,1614290199.0,"I've looked at some of the technical differences between Velocloud SD-WAN and their competitors, and am now trying to get a general sense of how velocloud SD-WAN's commercial terms compare to other offers in the market. I'd appreciate some advice on the below or a nudge towards sources to look at. 
+
+1. Where does velocloud sit in terms of price point against competitors like Fortinet, PANW, or versa networks for a small enterprise SD-WAN implementation?
+
+2. What are the purchase options like for me? Are they 1,3,5 year terms? Do they allow me to pay monthly?
+
+3. Suppose I want to get a subscription for a new license, can I co-term it to my previous subscriptions?",https://www.reddit.com/r/Velocloud/comments/lsi0tn/commercial_terms_for_sdwan_implementation/,Commercial terms for SD-WAN implementation,,1,2,1.0
+lgekz2,Velocloud,1612907833.0,"We have about 100 locations on Velocloud.  We are rolling out new timeclocks that have an odd behavior in that they exchange punch information amongst all the other clocks when people are punching in and out (so several times a day). This is all done using the **internal** IP addresses (timeclock to timeclock).
+
+This causes tunnel spikes, and we get warnings in our logs that the tunnel capacity has been exceeded due to the creation of a bunch of Edge-to-Edge tunnels during this exchange.   Granted, this only lasts for a few minutes (tunnels are torn down afterwards), but it bugs me.
+
+I have identified the traffic and know the destination TCP port number used for this transmission (with the typical random high port on source), and the transmissions are tiny at a few kilobytes so available bandwidth isn't a concern.
+
+I'm considering creating a Business Policy rule that shunts this specific traffic via the Gateway (via Multi-Path rule) to prevent all these spurious Edge-to-Edge tunnels.  Basically:
+
+Source: [10.0.0.0/8](https://10.0.0.0/8) any port
+
+Dest: [10.0.0.0/8](https://10.0.0.0/8) on the specific TCP port
+
+Action: Multi-Path
+
+Note that I have some Multi-Path rules for Internet-bound traffic, but I've never used one for on-net (overlay) bound traffic.
+
+Questions:
+
+1. If I send traffic destined for an internal IP address via the Gateway, will the traffic stay on-net (e.g. via overlay?  I assume the answer to this is ""yes"" since I understand the Edge will use the Gateway when tunnels are maxed out.
+2. Do I need a second rule for the return traffic as well?  In other words, a second rule sending traffic *sourcing* from the TCP port to any port via Multi-Path too?
+
+Thanks in advance!",https://www.reddit.com/r/Velocloud/comments/lgekz2/policy_forcing_internal_overlay_traffic_through/,Policy forcing internal (overlay) traffic through Gateway,,1,3,1.0
+ktacbn,Velocloud,1610135866.0,"Hey all, maybe a noob question here. Say I have a VCwith two 50Mb/s internet uplinks. Is it possible for a single device on the LAN side to see 100Mb/s (ish) throughput across both circuits? Or just a maximum of 50Mb/s per client?",https://www.reddit.com/r/Velocloud/comments/ktacbn/throughput_with_multiple_circuits/,Throughput with multiple circuits?,,1,3,1.0
+hzkd1j,Velocloud,1595961939.0,I need the VELOCLOUD-MIB. Can anyone provide it? The doc says to get it from the VeloCloud website but I am lost from there. I have the EDGE device MIB from my device but I need VELOCLOUD-MIB as a dependency.,https://www.reddit.com/r/Velocloud/comments/hzkd1j/velocloudmib/,VELOCLOUD-MIB,,1,0,1.0
+hn9igc,Velocloud,1594178625.0,Anyone using these 2 solutions? We’re getting very bad latency through the sdwan and we have 2 incoming separate 1gb fiber lines. Pretty unhappy with velocloud - over 2 years of service and we have had 6 outages. I mostly blame the msp - they are just bad.,https://www.reddit.com/r/Velocloud/comments/hn9igc/velocloud_with_horizon_view/,Velocloud with horizon view,,1,2,1.0
+he2y4m,Velocloud,1592867097.0,"Hey all,
+
+Currently reviewing options for setting up simple multi-cloud connectivity. The instinctual first choice is to use the Non-VeloCloud Site VPN to peer with AWS and Azure's VPN gateways. I've tested this and haven't ran into any issues thus far, but was curious: 
+
+Has anyone here deployed Velo VMs in Azure/AWS to connect to on-prem devices? If so, why did you go with this instead of using the cloud offerings, and what kind of experience have you had thus far?
+
+ I'd like to test this myself for comparison, but don't have additional licenses to work with yet. Let me know if I need to provide any clarification. Thank you!",https://www.reddit.com/r/Velocloud/comments/he2y4m/facilitating_cloud_connectivity_cloudnative_vpn/,Facilitating Cloud Connectivity - Cloud-native VPN offerings vs. VeloCloud VM?,,1,2,1.0
+glvimk,Velocloud,1589780471.0,"\[repost from r/vmware\]
+
+ Trying to setup some SNMP monitoring of our SDWAN... this article says download the **VELOCLOUD-MIB** from velocloud's website. I can't find it anywhere?
+
+[https://docs.vmware.com/en/VMware-SD-WAN-by-VeloCloud/3.3/velocloud-admin-guide-33/GUID-E0F39C47-B3B0-49A0-A9E7-AA3F53538EA8.html](https://docs.vmware.com/en/VMware-SD-WAN-by-VeloCloud/3.3/velocloud-admin-guide-33/GUID-E0F39C47-B3B0-49A0-A9E7-AA3F53538EA8.html)",https://www.reddit.com/r/Velocloud/comments/glvimk/where_do_i_find_velocloudmib/,Where do I find VELOCLOUD-MIB ?,,1,10,1.0
+fqla33,Velocloud,1585406088.0,"Looking for training on Velocloud SDwan. Not finding anything obvious out there, any suggestions?",https://www.reddit.com/r/Velocloud/comments/fqla33/training/,Training?,,1,1,1.0
+fk9hbr,Velocloud,1584466962.0,,https://www.reddit.com/r/Velocloud/comments/fk9hbr/is_there_any_free_lab_where_i_could_get_some/,is there any free lab where I could get some hands on ?,,1,2,1.0
+ezxgq3,Velocloud,1581017206.0,"Hi, 
+
+I am testing to see if there is any way to SSH to edge device pre activation from VCO ?",https://www.reddit.com/r/Velocloud/comments/ezxgq3/can_we_ssh_to_edge_pre_activation/,Can we SSH to EDGE pre activation ?,,1,5,1.0

@@ -1,0 +1,1147 @@
+post_id,comment
+ok6jqx,"It really depends. I‘m working for an MSP and, trust me, we went trough a lot of bugs. I can strongly recommend to select a experienced partner which are most likely not the big carriers. They are not even interested in selling SD-WAN. I‘m sure they can setup something but maybe not in an optimal way."
+ok6jqx,Not a fan of Rapidscale (Cox). Can’t wait for this contract to be over
+ok6jqx,"We tried to start with Videns, but felt it felt like a barrier, instead partner."
+ok6jqx,"Would love to hear about an actual MSP worth their shit rather than why all MSP's suck with this bugged out product that has more bandaids than actual next-gen features.
+
+Edit - our MSP is not our ISP, it's an actual MSP."
+ok6jqx,Who are you looking to replace them with?
+ok6jqx,"Really, I used to work for Videns. We had a great working relationship with Velocloud. Being one of the first MSP’s to roll out Velocloud in Europe gave us quiet some leeway withe devops and TAC at VC. Now Videns has been acquired by Expereo i’m guessing you no longer have Videns/Expereo as your MSP?"
+ok6jqx,at least we try our best to mitigate the problems that the software has at the moment.
+ok6jqx,"We're planning to manage it ourselves. Not only is their support team inexperienced and unresponsive, but they're a barrier from getting to the Velocloud TAC team. We went with a MSP because we were hoping for someone to be able to handle stuff proactively without a lot of intervention by us. But they do absolutely nothing until we call them, and then we wait, and then wait some more, and then hassle them, and then wait some more. A few days later they open a case with Velocloud TAC and then we make progress. We end up spending 2-3x the amount of time we'd spend on our own, and the time to fix the issue is also delayed. Oh, and their CA data center went down a few weeks ago so all of our non-velocloud connected VPNs were dead in the water."
+ok6jqx,"Hi, no longer Videns indeed. No MSP at all actually. Support directly with vmware and hardware from/via dell.
+Create our own tooling/terraform etc and all DIY.
+For smaller companies that’s most likely not an option at all. Having a dedicated team now, not too big, but almost same size as whole videns company at the time gets thing done (with full focus, even in complex organisation/infra).
+The extra cost is partly temporary as tooling needs to be developed and will switch to mainly maintenance at some time.
+Regards"
+ok6jqx,"Not really sure what to say to that.  The purpose of this post was to see what MSP's are out there besides my current one and to decide on one based on what information I find.  If you want to share (privately) who you work for, that's great, if not, that's great too."
+ok6jqx,"Ah, knowing the Videns customer portfolio I can guess what company you work for. Sounds like a great deal! Are you still happy with Velocloud? Me coming for an old world integrator this stuff blows my mind every time with the visibility of the traffic."
+ok6jqx,"Happy… partly…
+
+After configured it runs stable, but many small updates _may_ /_will_ cause (some) impact.
+I’ve not seen any docu regarding that.
+Huge thing when having CI/CD and re-apply/update config multiple times a day.
+
+Product has some “quirks” here and there.
+
+Just a few samples:
+
+Updating api specs without any notice /upping version. So todays downloaded specfile might be different the yesterdays (but same version)
+
+No api versioning, blocks progress and although said to be backwards compatible, depends on your tooling/setup
+
+Finding a (universal) supported SFP for 3800 based on docs….is like needle in haystack
+
+May need to reboot after sfp eject/insert…
+
+Api team kinda sucks, as they don’t use the published api spec as source, and lots are inconsistent/incomplete /incorrect at places and not too much enthusiastic receive with api team with pre-chewed suggestions for fixes/complete models.
+Apiv2 may change it, but based on progress that may take maybe 5 years if succeed at all.
+
+Documentation on api detail level lacks completely basically. Most is clear right away, but many times need to find out what the parameter is, and how is it is cross linked to other objects etc. (Several references and server type of id’s)
+
+Upto 100mbs all fine, but over 1 gbps gets hard (using dmpo and stuff), even using topmodel hardware.
+
+Whats about vendor lock-in/exit strategy?
+And using close sourced protocols
+
+While starting pilot pushing to MSP vendor while recommend only one (but with prior negative history). (Any color as long it’s black)
+MSP not supporting DIY (by definition right?)
+
+The List is long, and with those i find it hard to call it enterprise ready stuff and be “happy”
+
+If the company/api stuff/etc improve enough i will change status to “happy”… maybe.
+Still the vendor lock-in/exit strategy….
+
+On personal level it creates lots of opportunities to learn and develop the developer side of me. That makes me happy. (Writing terraform provider, build library from specfile, fix countless issues in specfile monitoring using aws lambda functions etc) and with that making the best of it as a service the company i work for
+
+Makes me curious what you do now, and if we might have been in contact last years (or not).
+
+Regards"
+ok6jqx,I left Videns in december 2020. Now working as an implementation manager for a swedish tech firm in the logistics sector. Something completely different. I had no real Velocloud customers. Was more on Cato and the Ipanema product for Videns. Did do some support for VC customers. Are you working for a certain warehouse/shipping company?
+ok6jqx,"Hi, working for company providing financial services."
+lkcwx2,"I hate myself for that naming.
+
+Standard HA is superior because it gives you full redundancy (all links active on both boxes). Many WAN links in large sites will provide multiple ethernet handoffs so that this can be accomplished without a switch. 
+
+Enhanced HA is typically used for small sites where the value of redundancy is outweighed by the complexity of using an upstream switch. 
+
+Latest 4.x versions do include route sync."
+lkcwx2,"Thanks.
+Then in 4.x standby can establish neighbourship with the same bgp neighbor before failover.
+I want to use bgp between core switch and sdwan device, and using communities i want to increase the level of control during rollout until all environment be migrated. Do you have an idea on how to use communities for this purpose?
+
+My other question is, i have stack l3 switch to connect sdwan devices in enhanced mode, how is the interface config on l3 switch and sdwan device? Is it bundle ip interface on core switch with lacp and same on dell sdwan  device?"
+lkcwx2,In my testing I saw edge establish tunnel on both links when using enhanced HA. Can you explain what you mean that enhanced HA does not provide redundancy?
+lkcwx2,Standard HA is Active/Standby. So the standby device will have its interfaces blocked except for the Failover/heartbeat connection.
+lkcwx2,"Assume you have a link from ISP A and ISP B.
+
+In standard HA, either device failing means the other device can still communicate via ISP A and ISP B.
+
+In enhanced HA, if the device connected to either ISP fails, you have not only lost your HA backup but you've lost your second link as well."
+lkcwx2,You can put an LTE modem as backup or hot standby link on the primary vunit to be used when the second unit failed. What I find useful in enhanced HA is that you don't need the L2 switch for link sharing purposes.
+lkcwx2,"Yes, you can. But unmanaged L2 switches are very cheap and very reliable."
+lkcwx2,"> What I find useful in enhanced HA is that you don't need the L2 switch for link sharing purposes.
+
+Yeah, that is the only reason Enhanced HA exists. It definitely makes sense for our SP partners who aren't permitted to install additional equipment beyond the HA pair, and it definitely makes sense in small sites where you are less concerned about overall reliability. 
+
+For me, in any site where business would be significantly impacted by the loss of one or more links, I would use standard HA because I get full link availability. That's not to say HA failures are even commonplace, but the MTBR on an unmanaged L2 switch (in the ""small site"" design) tends to be measured in years. In most large sites I've designed there has been a large pair of core switches with spare ports and I've simply used those ports to enable standard HA.
+
+In the end, those are really the tradeoffs of Enhanced HA:
+
+1. Throughput (because you're proxying through the standby device)
+2. Link availability during a device failure
+3. Some loss of visibility today (for instance, you can't current view speed/duplex of ports connected on the standby in the current code)
+
+For just pure simplicity if those things don't matter, no debate."
+lkcwx2,Thanks for the detailed explanation. Does throughout decrease when using enhanced HA?
+lkcwx2,"It doesn't decrease, but the HA port is a 1Gbps port so with the headers + the L2 encap we use for HA, assume ~700Mbps maximum IMIX user throughput."
+lkcwx2,I found some slides that mention there is a 260Mbps limitation on the HA link if it is not a DPDK port.which leads me to ask which ports are DPDK? Are all routed ports DPDK enabled ? How can I check either from CLI or GUI if DPDK is enabled or not for an interface ?
+lkcwx2,There is no 260 Mbps limit - but routed interfaces are DPDK-enabled and switched ports are not.
+lkcwx2,[https://imgur.com/a/ATmsRXK](https://imgur.com/a/ATmsRXK)
+lkcwx2,"Yep, this slide is outdated/incorrect."
+lkcwx2,I shared the screenshot of the presentation I saw mention the 260Mbps limitation for non-DPDK port.
+zqyh4l,"You could play around with segments.   
+The hosts/IPs that you want to be able to use B2B can have their own segment with Cloud VPN enabled, while the hosts that should not are in their own separate segment without B2B. The drawback to this is the hosts wont be able to communicate with each other (there is no way to communicate 2 different segments). If you still need the inter-segment connectivity, there are some ways to workaround it, such as U-turn routing using 3rd party. Its a bit crazy but Ive seen it work"
+zqyh4l,"Outstanding! Thank you for your fast reply and your thoughts! I appreciate it.  I am getting ready to hop on the call with our 3rd party support partner and hopefully they can help.  These were not suggested before.  So, I will give them this suggestion and see how it works.  Thanks.  I will update this post once I get a solution.."
+yd9nym,"That’s the way I normally provision a VM VCE as it’s easier to just input the CLI commands then rebuild a cloud init file each time. I have a base generic cloud-init file
+
+Here are the instructions I made myself. 
+
+Once booted log in via the Console. 
+UN/PW is root/velocloud as set by the cloud-init ISO
+
+Set the WAN configuration with the appropriate Interface
+	set_wan_config.sh GE6 DHCP
+	set_wan_config.sh GE3 STATIC <IP address> <netmask> <default gateway>
+
+Activate the Edge (DNS may not work, so resolve to the IP of the Velocloud VCO)
+	activate.py -s X.X.X.X -i XXXX-YYYY-WWWW-QQQQ
+
+The edge should now activate the VCO and update code, configure as normal.
+
+Edit: I’ve also found if I didn’t set the cloud-Init correctly the first time I have to rebuild the VM"
+yd9nym,I had been awake too long when I asked that question and was trying a dig with HTTPS on there 🤦🏻‍♂️
+yd9nym,">set\_wan\_config.sh GE3
+
+How did you resolve the orchestrator IP? Dig?"
+yd9nym,A simple nslookup or ping to the VCO URL would give you the IP.
+yd9nym,">set\_wan\_config.sh 
+
+Final question - where do you set the DNS for the VCE? Or if you cannot then thats why you use the IP address then have the VCO set it?"
+yd9nym,"Yeah I think you may be able to set the DNS into the intial Cloud-Init file. Mine doesn't have it, so a simple nslookup for the VCO IP works without issue."
+yd9nym,Thank you for all the help!!!
+tgg0jd,The standby will upgrade first. After the installation of the new image is finished an HA failover will occur. The new standby will then do the other upgrade.
+tgg0jd,"This, though this process is much smoother in the 4.x firmware than priors."
+tfq9q4,"You can configure alerts for link up/down:
+https://docs.vmware.com/en/VMware-SD-WAN/4.0/VMware-SD-WAN-by-VeloCloud-Administration-Guide/GUID-3C73EC7E-C7BB-4CC9-93A8-4810E9EB6456.html
+
+You can also pull SNMP Traps from the edges into the tool of your choice:
+https://docs.vmware.com/en/VMware-SD-WAN/4.0/VMware-SD-WAN-by-VeloCloud-Administration-Guide/GUID-D967D478-562E-4FC2-8AAD-4490190094FD.html
+
+Also you can get QOE data and much more from the API:
+https://developer.vmware.com/apis/1037/velocloud-sdwan-vco-api
+
+You can defo injest all the edge SNMP data into splunk and create a custom dashboard, you can also roll your own solution. Just because a solution is free does not mean it wont cost you more in time."
+tfq9q4,"vRealize Network Insights is another option for this. The solution is well-supported as both products are developed by VMware. If you value your time, this would be the best route to gain that visibility, regardless of the other metrics you gain with vRNI."
+tfq9q4,"Just curious which solution you end up going with and how it’s working out for you?
+Besides getting alerts based on QOE thresholds etc, I am looking for a way to monitor and get alerts for the tunnels to other edges, hubs, gateway. We have had situations where even though one of the internet circuits  is up and running clean on the Edge with multiple ISPs, the tunnels to other edges fail over that circuit and we had no idea until manually checked tunnels via edge diagnostics."
+tfq9q4,This is great! Thanks a ton for taking the time out to send this. Really appreciate it!
+tfq9q4,"Thanks! We were offered their ENI service, but this looks a lot better. Appreciate the tip!"
+tfq9q4,Just curious what’s the cost on average per edge for vRNI?
+qf1snx,It's already optimised under the default business policies but if you wanna give it a higher priority than any other stuff than yup a business policy with o365 as application and high priority should do it for you
+qf1snx,"Hi all,
+Sorry for the late reply.
+Been in contact with the Velocloud team. 
+The Velocloud that I'm currently using is licensed as POC & the Velocloud team is saying that edges that have POC licenses, not all gateways are available to them. Therefore that's one reason that it's selecting a EU gateway."
+qf1snx,"Thanks for the info. One question. I'm pinging google.com when connecting directly to my ISP's router, I'm getting 52ms. But when connecting to Velocloud it's 200ms+. When troubleshooting deeper, it seems like the traffic when pinging google.com is going to Europe (Velocloud Gateway?) then coming back. If I don't want to use Velocloud Gateway, I have to select Direct instead of Multi-path when configuring business policy?"
+qf1snx,"Hello,
+
+Can you check to which VeloCloud Gateway is your VeloCloud Edge connected to.
+You can do that by going to Test and Troubleshoot > select your edge > scroll down to find List Paths > select peer as Gateway > Run.
+(This is just to confirm that your edge is assigned to  nearby gateways)
+
+Basically the business policy would be configured to reach the google.com via gateway and the gateway is located in Europe.
+
+Create/Modify the business policy to use network service as direct instead of Multipath. This will break out to the destination from edge itself.
+
+Thank you."
+qf1snx,"I'm dealing with a similar situation but we go to the vcg and onto a cloud proxy. From what I have experienced, ICMP traces are not super accurate over velocloud. If you have support take a system dump for you they can tell you what the direction the traffic is going and what rules it's hitting on the biz policy. Sending things directly will just drop the traffic straight out of the velocloud and into your wan link of choice."
+qf1snx,"Based on the information provided i would think you have the location of the edge wrong and it's connecting to the gateway in europe. Happened to me I had the address wrong and it connected to a gateway in china
+You need to put in specific address that way it will connect to the nearest gateway
+Btw to answer your qs yes, selecting direct for all internet traffic should bypass the velo gateway for you"
+qf1snx,"This is due to the gateways associated to your profile in the VCO.
+
+As a default policy, a customer is assigned to default pool of gateways, which can be located all around the world. To overcome this issue you can open a support ticket and ask the TAC for the creation of a dedicated pool of gateways. In this way you can ask that your Edges connect only to the gateways in your region (e.g.: North America, Europe and so on)
+
+To have an idea of the gateways associated to your VCO, you can go to: Configure -> Edge -> Device -> WAN settings -> Create a new Private Overlay if you don't have one, select SD-WAN reachable and a list of public IPs will appear. These IPs are the pubblic IPs of the VCO and the VCGs"
+qf1snx,"Hi,
+Yes I see 2 peers (usvi2 & fra1) 
+Another test that I've done.
+I have connected to my isp router and uploaded a 524MB file on SharePoint that took 1min30sec. (50MB/s)
+Connecting to Velocloud(2 ISPs connected to it) and creating a business policy  and selecting SharePoint as application with high priority and Multi-path.
+Uploaded the same 524 MB file took 2min30 (30MB/s)
+🤯
+Can't get my mind around this. How is that optimised ? I'm I doing something wrong ?"
+qf1snx,Something is definitely wrong! Can you send me a PM so I can take a look at your Edge?
+mrk3la,"Here is the password: VeloHelloXXX 
+
+Replace XXX with last three digits of the serial number"
+mrk3la,Login as root
+mrk3la,"Hi, don’t forget to open up firewall/support acces
+
+For virtual appliances you had to configure  an account with cloudinit
+
+Regards"
+mpkhan,We have pushed several thousand Edge upgrades at once - the spread is based on the Operator Profile settings and the Orchestrator's load. 100 is a very small upgrade and will not cause any significant time to distribute.
+mpkhan,"For a deployment that big, it will probably queue up the upgrades. I think it is usually 8 at a time, or at least that is what my company's environment does. Takes about 5 to 10 minutes per edges and about 10 to 15 for HA pair."
+mgije8,If you setup the SDWAN management VLAN and allowed an IP from that subnet to access the web GUI you can use the assigned port to connect to the SDWAN Management IP and configure it from there. If you didn't do any of that..... Factory reset and RMA reactivation is probably you fastest route
+mgije8,"Thanks guys, I did the RMA reactivation with the factory default and it worked."
+mgije8,"Simply you will need to factory defaut EDGE, RMA in Orchestrator and reacivate the edge from a local machine with new code & IP. That would be the fastest way."
+mgije8,"There is a local interface for the device, but yes the best practice is to RMA re-activate, its just easier for the on-site and the engineer."
+lfz24t,"Its under the VLAN settings area, check the DHCP option and it's literally right there. Not sure how you could miss it.
+
+Also, use the support team, that's more reliable than reddit."
+lfz24t,Its only under vlan if u are using vlan. Or else should be under the physical port setting
+lfz24t,">Its under the VLAN settings area,
+
+ **Fixed IPs** 
+
+I found it, THANK YOU.  
+Can you guide me how to contact support team and how fast are they in respond on such question?"
+lfz24t,"Your support may be partner-provided or VMware-provided.  If you have support entitlement with VMware, refer to [https://kb.vmware.com/s/article/53907](https://kb.vmware.com/s/article/53907)"
+lfz24t,"Thank you.   
+One additional question if u dont mind.  
+Is it possible to connect to the edge without need to connect it to the internet and access them via Orchestrator.
+
+So, direct from laptop via UTP cable? (like any switch, firewall or router)"
+lfz24t,"No, it is managed from the Orchestrator not locally."
+lfz24t,Thank you. Do u know does it have DHCP table with active users?
+lfz24t,"Yes, from Remote Diagnostics click on ""List Clients"" which shows IP, MAC, hostname, lease expiry and wireless connectivity details (if applicable)."
+kbdx7b,"We do the exact same thing with Velocloud and a ASA.  Yea the documentation isn't great for it.  But the Custom Source Subnets is used when specifying a Policy Based VPN.  They need those subnets match up for the Phase 2 Configurations of their VPN/Cryptomaps.
+
+If you're looking to limit your MSP's access, a Firewall Policy at the Profile level with Object Groups is likely your best bet.  I think you can use Object Groups on the firewall config anyway.  It's likely that all their traffic is from one subnet.
+
+Speaking as an MSP though, it is best to let them know about it.  We aren't offended at all.  Having a note regarding this on your customer account may be helpful to us."
+kbdx7b,"Thanks for your replies, now I see what the value does (and seems obvious now)."
+kbdx7b,"Thanks for calling this out - we'll improve that documentation. 
+
+By default, policy based VPNs will establish SAs between every LAN subnet in your network and every remote subnet. This obviously doesn't scale well in a very large network, and doesn't allow you to restrict the subnets you want encrypted. As noted, custom source subnets allows you to override the subnets we propose in Phase 2."
+k9dzt4,"I do not believe so, I run a bunch of 540s and when you flip on HA it locks down LAN1 for that purpose and that purpose only."
+k9dzt4,"Great, thanks!!"
+il7g1c,I have plenty of customers that are using these in data centers. VCE Model depends on the number of remote sites you have. For 5-10 sites 540 and 840 are more than enough which are not shipped anymore so 640 I believe is the equivalent. Larger than 15-20 remote sites than VCE2000 are being used.
+il7g1c,How viable are these for multiple 10Gb links & replication?  I'm told by our account rep that these devices are not exactly capable of 10G without a pretty significant price increase.  Ideally in offices these seem to be great for WAN but when it comes to DC inter-connectivity it seems like these are still too limited.
+il7g1c,"Haven't come across any with 10GB links. But I've seen multiple 1Gb links with VCE cluster in datacenters that supports over 500 remote sites. But you're right that may incur some significant price increase. Pretty much everything standard is supported, there are ways to make most things work. They are increasingly being deployed around US. There are larger models like VCE 3400 and 3800 that I guess would be suitable for 10Gb links but haven't come across them personally."
+il7g1c,"I wouldn't have any issues with 1G links, but 10G w/price increase doesn't seem to offer much advantage to traditional routing."
+epva9f,good to know. thanks . I've been looking for this recently.
+yue7c3,"I’ve never tried to get this working with Eve-NG. 
+
+Most times if I’ve had an edge not come back up after it activates it’s because the interfaces don’t match what the config is. So having the Wan only configured on a down interface."
+yue7c3,Did any one face similar issues ?
+yue7c3,"So i managed to isolate the issue in one scenario.
+
+This happens only when the edge is connected in a different network than the VCO and VGO.
+When i connect the edge to the same network as VCO and VGO , everything works fine.
+When i connect the edge with 2 interfaces , one in the same network as VCO and VCG and another in a different network, it works.
+
+It only doesn't work when all interfaces are in a different network than VCO and VCG , despite activated correctly."
+yue7c3,"Hi, perhaps relevant, perhaps not. With VCO 5.0.1 and edge 4.5.0  in GNS3 connections failed to VCO from Edge. like stats, diagnostic bundle etc etc, even tried to scp a later file (dd if=/dev/random of=myrandomfile count=1000000 ; scp myrandomfile vcadmin@....)
+
+Didn't yet upgrade to lasted software, due to contract ownership change we seem to have lost the ability to download latest VCO and VCE software..
+
+Dit you configure cloudformation and console access? so you could have a look into /var/log/mgd.log (and /var/log/edged.log)
+
+Although not using eve (but gns3) , i would be interested in sharing some information."
+yue7c3,"What is bothering me is that it used to work, sure edges would hang once a week and once restarted had to be activated again, but at least they worked in between"
+yue7c3,"This works for me at least using GNS3, having a router in middle, for 3 different subnets for VCO's VCG's and VCE's. not sharing any interface in any network. Also configure some routing from host OS to access all components."
+yue7c3,"Thanks for the response
+My issue was because i was using private IPs for the edges while connecting to the internet interface of the gateway.
+
+There is a file that i needed to edit to allow connections from these subnets (i think it was called blocked_subnets or something)"
+ysoa94,This has been a challenge for me but slowly gotten up to speed by myself
+y7wov0,The pgw should be able to reach vco over port 443 tcp and 2426 udp i believe.
+y7wov0,The pgw should be able to reach vco over port 443 tcp and 2426 udp i believe.
+y7wov0,"Hi
+
+Sorry, just for sure pgw is Partner GW? 
+In any case Access should be only 443 https. What about certificate? Maybe this is the problem? Try to not inspect this traffic on your FW. 
+VCO is VMware or your on-Prem? Ignor Certificate error. 
+On my experience, if it is not network then certificate error, can be in different places."
+y7wov0,"Thanks, but i'm getting connection timed out, [Errno 110]"
+xxnxgz,"SolarWinds just released an update for api monitoring of the orchastrator which then can pull and associate the edges. From there you can monitor link health.
+
+It seems solid for enterprise, but unfortunately lacks partner level support to monitor multiple clients."
+xxnxgz,There is one way to monitor the edge from any other monitoring system by snmp with specific OID to get information about overlay path. Or you can get info by API with Post requests.
+xxnxgz,"Hmm, do you have any links/references to this new feature? The release notes I’ve read mention Meraki API support, but I don’t see anything regarding Velocloud?"
+xxnxgz,"Thank you for your reply, was just wondering if you were able to successfully implement something like this and which product/solution have you used ? Thanks!"
+xxnxgz,"They announced it with the 2022.4 release.   the documentation wasnt great, but i stumbled my way to some below after finding the option for Vecloud Devices API when deploying a node. 
+
+https://www.solarwinds.com/documentation/en/flarehelp/npm/content/npm-velocloud-sdwan.htm?cshid=orionnpmaddvelocloudfororchestrator#Add"
+xxnxgz,"Oh nice! Will check it out, thanks fellow redditor!"
+xxnxgz,"No problem. We're a velo partner deploying these as essentially an msp. The orchastrator reporting and such is great but the alerting is pretty barebones, so I've been looking for solutions there."
+x86ghs,"No, unfortunately not. VeloCloud is an L3 network so you can't simulate an L2 transport network."
+x86ghs,"And I’m happy about that fact, Craig"
+x43vxs,"The VMware knowledgebase has a ton of guides on configuring velos and their capabilities. Outside of that you can find white papers that give a good explanation of things. 
+
+I've found that VMware keeps all the best stuff internal and you'll need a partnership and NDA to get that"
+x43vxs,"What is the ""good stuff"" that you feel is internal? Let me know so we can make it public."
+x43vxs,"Hi, I'm also kind of new to Velocloud. I would be very interested in seeing more of the concepts especially about vcrp and vcmp in detail. I've read the whitepapers and what i could find via websearch and while that is good enough for a brief understanding and basic setups, i would like to understand the velocloud behavior better for more complex setups and a deeper understanding of whats going on. are there any sources i haven't found yet?
+
+Edit: My colleague also hinted me that it would be very interesting for us to better understand the firewalli & business policy functionality. How exactly is traffic handled when DPI for example had no chance to work properly (e.g.: during TCP handshakes). does the traffic gets handled with the default route first and then when DPI had a chance to detect the application the traffic gets rerouted? what are best practices here etc. etc. i may add that we've read the Administration-Guide and all we could find about it already.
+
+thanks in advance"
+wz8lwz,I think I'm seeing mtu fragmentation issues from client machines. Not sure what to make out of it.  I was under the impression that DMPO can automatically discover the right mtu size.
+wz8lwz,what was the fix?  MTU?
+vrzmk3,Is the edge activated and connected to orchestrator?
+vrzmk3,Are you using 4.5.1? It's a known issue in that release that some don't work and there is a fix [4.5.1.1](https://4.5.1.1) to address it.
+vrzmk3,yes. edge activated by this command [activate.py](https://activate.py) \-i -s {ip of orche} {activation key}
+vrzmk3,I used 5.0.0
+vngp8b,"Are you comfortable interacting with the VCO API? If you are, then what you are looking for is available at the `/metrics/getEdgeAppLinkMetrics` endpoint. It will return the Tx and Rx throughput and the packet count for the given time interval per WAN. VCO API v1 4.5.0 at [https://developer.vmware.com/apis/1187/velocloud-sdwan-vco-api](https://developer.vmware.com/apis/1187/velocloud-sdwan-vco-api) for your reference.
+
+I was whipping up a quick Python app a while back to call the VCO API for WAN anomaly detection. I was interested in the latency, jitter and packet loss so I was calling a different endpoint i.e. `/linkQualityEvent/getLinkQualityEvents` instead. But the rest of the code that initiates the VCO client object, constructs the authentication header with an API token or obtains a cookie for authentication using user and password, reads the enterpriseName and enterpriseId that are needed for calls to some API endpoints, translates the time to epoch and builds the other parameters in the HTTP body for use in a call, and handles the returning JSON, should be reusable. Feel free to clone it, and modify the endpoint and other parameters your need from [https://github.com/kurtcms/vco-api-wan-anomaly-alert](https://github.com/kurtcms/vco-api-wan-anomaly-alert)."
+vngp8b,Good question. Monitoring features are not very good presented…
+vngp8b,Ok unfortunately I have read only access.  So that's not going to work for me.
+vngp8b,"You don't need the full write permission for calling to `/metrics/getEdgeAppLinkMetrics`. You only need the `EDGE` and `VIEW_FLOW_STATS` in addition to the `READ` privilege that you already have. You could try asking your VCO provider, or VMware directly if yours is hosted and operated by them, to give you the needed privilege. VCO of version 4.3 or latter supports Role Customisation which would allow for adding or removing privilege per tenant, and per user account. That means providing you the added privileges would not affect any other customer on the same multi-tenant VCO. There is no reason not to provide these to you given you have a valid use case.
+
+The VCO is first and foremost an API server. The GUI comes as a frontend that calls and and interprets the returning JSON on it. I would suggest to make full use of it with the API.
+
+Otherwise without using API, I don't know of any other way to getting what you are after. Sorry, mate."
+v5x88x,"Hi, 
+
+I could be wrong, but Netflow stat you could receive only from Lan Interface, no matter to what direction, Direct or Cloud VPN. If you what to see traffic from exact WAN Internet interface, you could filtered traffic with NAT ip address of WAN Interface. Maybe this document could help to find out the working process. [https://kb.vmware.com/s/article/79184](https://kb.vmware.com/s/article/79184)"
+ume1yc,"We are running a few flavors of 4.x code and they are telling us there's a known bug with SNMP. Waiting for a response on what version of 4.X I should go to. I'll update here when I get a response.
+
+This shift to Dell hardware is likely the cause, and has been a little bit messy imo."
+ume1yc,"Hi,  
+
+
+What version release of 4.2.2 are you using?  
+
+
+The latest 4.2.2 version release is R422-20220419-GA, which resolves a lot of SNMP-related issues.
+
+https://docs.vmware.com/en/VMware-SD-WAN/4.2.2/rn/VMware-SD-WAN-422-Release-Notes.html#knownissues"
+ume1yc,More than likely 4.3.1. From what we’ve seen a bunch of the SNMP bugs were solved in that code rev. It’s also the green starred version
+ume1yc,"Could be, we just pushed an edge to it a few hours back. Haven't gotten around to testing SNMP yet though."
+u7c1dh,"Hey there,
+
+I did the following tests with my test device (image version 4.3.1):
+
+* Change an Interface from ""Switched"" to ""Routed"" and vice versa - **Service Restart**
+* Change a ""Routed"" Interface from ""Static"" to ""DHCP"" and vice versa - **Service Restart**
+
+From my observations, the answer to your question is **Yes,** it will cause **Service Restart.**
+
+Hope this helps!"
+u7c1dh,You rock man!!! Thanks for this. Wish i had test devices i could have tried this one.
+sii8ry,"The Management IP would perform a similar function. See the last section in the link
+https://kb.vmware.com/s/article/82533"
+sii8ry,"No, I think you didn't understand me  
+  
+(loopback0) \[velocloud\] --->>>> private-range (172.16.16.0/30) ---->>> ISP's router---->>internet  
+  
+Loopback has public ip address, I could reach everything on internet when I source traffic from it. Private range between velocloud and ISP's router doesn't have internet access, it's not nated somewhere along the path.  
+  
+I've just tested, I can't force Velo to use loopback interface to communicate with orchestrator, VPGs or anything else"
+sdfy4p,"Velocloud Edge is available in the Azure marketplace.  No need for NVS tunnels or VWANs.
+
+Just plop one of the interfaces down with a public IP and it'll be able to reach your VCO and the public VCGs."
+sdfy4p,"You can do IPsec from SD-WAN gateway to azure virtual wan and direct IPsec from sd-wan edge to azure virtual wan.
+
+Documentation is here: https://docs.vmware.com/en/VMware-SD-WAN/4.5/VMware-SD-WAN-Administration-Guide/GUID-A0AB66B6-07E7-4AC2-866F-10D66D318B79.html"
+sdfy4p,"Hi, be aware those solutions may/will force you into a cluster setup which has enormous disadvantage as we noticed: no sd-wan cluster2cluster possible/supported (needs to be solved otherwise)
+We’re about to deploy azure-virtualwan + sd-wan paas, which integrates using bgp/routing in azure virtial-wan.
+We considered iaas in azure and using azure/vmware gateway option. Both were more limited to our opinion.
+But again remember the cluster2cluster limitation
+
+Regards
+Arjan"
+qwqlyt,"why not disable branch to branch via cloud vpn?... much easier . 
+
+if u insist on firewall. do a deny in bound and out bound based on the branches lan subnets"
+qwqlyt,I have set the destination to the local VLAN and seems to be working.
+qwqlyt,"This works.
+If you don't want branches to communicate with each other, you can disable branch to branch cloud VPN."
+qwqlyt,The simple mistake I was making was in not realising the firewall is outbound.  All makes sense now.
+qaq3gn,"The Edge can't act as an L2 device, you'll have to use port forwarding/1:1 NAT for this if they are initiated inbound towards the firewall."
+qaq3gn,Thank you so much for the reply.
+pmq6t6,"Hey guys,
+Would you recommend something like zscaler to properly  secure edge internet breakouts or am I missing something with Velos security capability ?  
+
+Cheers 
+
+Matt"
+pmq6t6,For SaaS traffic zscaler CASB can be used. Do you want to secure all breakout?
+pmq6t6,Depends on what you’re trying to accomplish with DIA traffic. Velo is new to the game so would take but time to get things in the order. I’d say Umbrella could be considered if you’re trying to do a bake off.
+oy22g1,Sorry nobody answered this - your understanding is correct. Let me know how we can improve the documentation and we'll do it!
+olod23,This discord link is invalid? Any updates or any alternate link? Please share
+o52j4x,"We have about 100 sites configured this way .   We've had success with one exception: there was a bad code release (I believe 3.3.2) that caused DHCP issues, which was fixed in 3.3.2P2 and above.  You might want to double-check you're not running that release, as it caused us a lot of grief with DHCP relaying.
+
+I think there are a few ways to do it, so here's how we do it:
+
+* Define all the VLANs on the Edge Device configuration, which is also where you configure your IP and DHCP relay settings.
+* Assign those VLANs to a Switched + Trunk interface on the Edge.  We use Cisco switches, so the corresponding interface on the switch is also defined as a ""switchport mode trunk"".  We don't use sub-interfaces, they are just VLANs on the trunk.
+
+Hope this helps..."
+n6vszu,"Hi, I work for a VAR and I have deployed some VeloCloud Implementations.
+
+In regards to DMPO, according to my understanding, DMPO is a set of remediation techniques that include packet cloning, FEC, Jitter buffering, NACK, and Link aggregation, in my region (LATAN) where the quality of the internet services provider is very poor we suffer for a bad quality video call: MS Teams, Zoom, Webex, etc.
+
+VeloCloud DMPO has demonstrated to help remediate bad quality links by providing good QoE for VoIP services.
+
+In regards to the Orchestrator, there is a new and nice GUI in development.  
+\[Imgur\]([https://imgur.com/u6bR3ej](https://imgur.com/u6bR3ej))  
+ \[Imgur\]([https://imgur.com/Z9sExO4](https://imgur.com/Z9sExO4))"
+n3oszz,So that will be the closest gateway. Thanks man. Will check it out.
+n3oszz,"No idea the metrics it uses. Never bothered to ask. When it turns yellow you want be be weary of any latency sensitive traffic as it may begin to be affected.
+
+Destination should be to the orchestrator from the selected edge."
+n3oszz,"the QoE is measured between edge and the gateway. The delay, jitter and packet loss thresholds for Green, yellow and Red are shown in the figure attached.
+
+ https://imgur.com/Ve3dUGx"
+n3oszz,"So yond shall beest the closest gateway.  Grant you mercy sir.  Shall check t out
+
+***
+
+
+
+^(I am a bot and I swapp'd some of thy words with Shakespeare words.)
+
+Commands: `!ShakespeareInsult`, `!fordo`, `!optout`"
+n3oszz,"dumb bot, lol"
+mmv00j," I’m looking for an explanation of how VeloCloud connects edges/sites. Is it done by default? 
+
+\- Dynamic Edge-to-Edge or static Edge-Hub-Edge is supported.  Pro/cons to each approach, operator gets to decide.  State here:  [Configure a Tunnel Between a Branch and a Branch VPN (vmware.com)](https://docs.vmware.com/en/VMware-SD-WAN/4.2/VMware-SD-WAN-Administration-Guide/GUID-FD993C05-81C9-4BAC-B446-6EFA3359E293.html?hWord=N4IghgNiBcICYE8B2YC2BLAxgAgKZwHNdsAXAez0NxAF8g) 
+
+Is there a VPN table/route table i can look at? 
+
+\- Yes -  [Performing Remote Diagnostics Tests (vmware.com)](https://docs.vmware.com/en/VMware-SD-WAN/4.2/VMware-SD-WAN-Administration-Guide/GUID-1B35F0D5-9251-419E-B59D-FCD387144A18.html?hWord=N4IghgNiBcIKYBMDmcAEAnA9gVwC5tzACMI4QBfIA#GUID-1B35F0D5-9251-419E-B59D-FCD387144A18__GUID-8909A265-7ACC-4ECF-8D67-346F5944A00A) 
+
+If not how to i configure hub & spoke in the VCO? Or should i do edge clustering?   
+\- Start with [docs.vmware.com](https://docs.vmware.com).  Make sure you have the correct software version selected when reviewing documentation.
+
+[Best Practices for Upgrading Edges Deployed as Hub and Spoke (vmware.com)](https://docs.vmware.com/en/VMware-SD-WAN/4.2/VMware-SD-WAN-Administration-Guide/GUID-E2558DB8-6BD5-4D1A-AACA-1A14C82A82D6.html?hWord=N4IghgNiBcIKYBMDmcAEALArgI1QZwAcB7AazhAF8g)   
+[Configure Edge Clustering (vmware.com)](https://docs.vmware.com/en/VMware-SD-WAN/4.2/VMware-SD-WAN-Administration-Guide/GUID-201E64A6-5AA0-42FC-B396-6AF7CF6ECAC9.html?hWord=N4IghgNiBcIKYBMDmcAEALArgI1QZwAcB7AazhAF8g)"
+m2ck1g,"Hey, this won't work.
+
+NAT'd IPs and ports are learned dynamically by the Gateway using our control protocol. 
+
+For private links, we have no way of ""learning"" what the IP will be on the other side of the NAT, so we rely on communicating the statically configured IP address on the Orchestrator."
+m2ck1g,"Velo recommend two ways to overcome NAT issues in dynamic branch-to-branch tunnel establishment
+
+1. configure the upstream device to allow UDP/2426 inbound with port forwarding to the Edge private IP address
+2. enable UDP hole punching on the private overlay"
+m2ck1g,"As I mentioned, first device that is upstream is already doing one to one NAT. So inbound 2426 is open. At least on my vco udp hole punch flag is only available for Public overlays, not for private. And since this links are private I don't have an option to enable them."
+m2ck1g,another point to consider is inbound UDP 2426 should be open on firewall to allow  dynamic Branch to Branch VPN. Also make sure you are not doing profile isolation for dynamic between the two edges.
+m2chea,"I think the stock qos does very well on its own. I if you have some business critical apps like SAP, I'd suggest adding them yourself."
+m2chea,"thanks u/spinny319. I think the DPI will handle identifying the apps and putting them in to the right priority (high, medium, low) and service class (real time, transactional, bulk). My question is more about the percentage values assigned to each category in the 3x3 matrix based on the identified priortiy/service class mapping. Should you change those values or use what comes out of the box?"
+m2chea,99% of customers leave those default values and never have a problem.   I suggest leaving them as-is unless you have data to suggest that they need to be changed.
+m2chea,"We left ours alone and haven't had any issues so far (been running for about 2 years). Id ask your sales engineer, most of the ones I've had are pretty knowledgeable."
+m2chea,thanks u/TweakFreak88 .I will follow that recommendation and tweak as needed.
+lw82h3,"It does not stop user traffic.  It will consume the remaining link bandwidth and the user will not be able to use the full link speed during the test.  User impact for that will depend on the application and overall link speed.  
+
+Generally speaking the bandwidth test is a short event and a user won't notice it."
+lw7zzf,Is the device in an HA pair?
+lw7zzf,"Yes.  We use 610's paired in HA (*VCEs using SW version 3.3.2*).  One VCE accepts a MPLS ckt (WAN interface GE4) configured as User Defined, the other accepts an INET ckt (DIA or Broadband) in WAN interface GE3 configured for Auto-Detect.  Sometimes I see the MPLS interface showing N/A Mbps for Speed and Duplex while at other sites I see that shown for the INET ckt interface.I just do not know what it means.  I see traffic passing.  Last night I turned off auto-negotiate on one such interface and manually set the speed and duplex *100/Full* but I still saw it showing N/A Mbps.
+
+Could it be that only the Primary VCE is reporting back it's WAN interface Speed and Duplex to the Orchestrator?"
+lw7zzf,Ok so you have it in an EHA configuration. One circuit per VCE. This is common in the EHA pairing. The circuit on the second wont have anything in speed/duplex. Velo has no answer to this as of yet but what you see is normal on the secondary. If you fail the pair over you can see the proper info but the other will show N/A. It is slightly frustrating but the best way to confirm it is to just fail over the HA manually to check on your other circuit
+lw7zzf,"Thanks for answering that, I have a ticket open with VMWare for just that question and they have not been able to answer what you just did.
+
+I could also look at the duplex and speed setting on the old FW and Router ckt WAN interfaces to see if they were set for auto-negotiate or not."
+lj7gkt,I had a quick chat with u/trenuci and we corrected his configuration and all set now.
+lj7gkt,"[topology](https://i.ibb.co/QvLtLM4/Screenshot-2.png)
+
+So, I have only configured two static route, and added subinterface (Addressing static) and  under physical interface (addressing DHCP)."
+lj7gkt,Any help?
+lj7gkt,"I believe you have to create a Public Internet User defined Overlay for it to build a tunnel to the gateway
+The other thing I would check is to allow UDP 2426 bidirectionally from firewall and allow tcp dns outbound"
+lj7gkt,I can't see this network diagram.
+lj7gkt,"I'm not sure what model or edge software you are using but I have run into many struggles trying to use subinterfaces on routed interfaces as opposed to using a trunked switched interface. I have even had a ticket with support in, they eventually concluded that there was a bug and we needed to upgrade to a newer software version. I haven't had a chance to update yet though."
+lj7gkt,">UDP 2426
+
+I have allowed all traffic that edge needs basic on several Edges I have already deployed. Only difference is sub-interface.
+
+I will try with Public Internet User Overlay."
+lj7gkt,Check DM please :)
+lj7gkt,What were you trying to do? What is the bug number?
+kxya7n,"\> Is the throughput license calculated by summing up the upload and download bandwidth of all the underlay accesses?   
+No, this is specified manually when creating the edge. There is no mechanism in the VCO that defines which license you have/should use.   
+
+
+\> And is it an ""honor"" type system that is ""trued up"" from reporting only. ie; there's no policing mechanism on the edge device to rate limit the total throughput.   
+Yes. The license is mostly for reporting and tracking purposes. The license you have on an edge will not affect how an edge operates in any form.  
+
+
+[https://docs.vmware.com/en/VMware-SD-WAN-by-VeloCloud/4.0/VMware-SD-WAN-by-VeloCloud-Administration-Guide/GUID-75C7AC38-4EB6-4AD4-958D-40EDC9E634F5.html](https://docs.vmware.com/en/VMware-SD-WAN-by-VeloCloud/4.0/VMware-SD-WAN-by-VeloCloud-Administration-Guide/GUID-75C7AC38-4EB6-4AD4-958D-40EDC9E634F5.html)"
+kxya7n,"Since the VMware acquisition i think they are still working out what they want to do here. I've heard various things about your average 95%tile being used as  the marker but who knows.
+
+What has started happening is that when you activate an edge you are now asked to select a licence level. No enforcement yet but I'm sure its coming."
+kxya7n,Thanks.  So how does one calculate which license to manually select?  Let's say I have 2 x 25 Mbps symmetrical accesses.  Is that a 100 Mbps license?  or select the 30 Mbps tier (for 1 single 25 Mbps access)?
+kxya7n,"That actually would be a pretty good technique to use...  better that summing up all the up/down BW sizes of all the underlay pipes or putting in traffic policing.
+
+A lot of GPON and DOCSIS accesses have pretty high limits already and would suck to rate limit the throughput when a pipe may sit idle after office hour or for ""spikey"" traffic patterns."
+kxya7n,"License is decided at the time of purchasing velocloud, either with VMware directly or thru a Partner. 
+Whatever is on the contract, that's what you put there"
+kxya7n,Or someone runs a speedtest
+kxya7n,"That seems a bit “iffy”...  so if a partner says, I see you have 2-100 Mbps symmetrical pipes, but you probably won’t drive that much throughout (or whatever excuse), let’s just select the 30 Mbps tier...  VMware will never know...  “nudge nudge, wink wink”..."
+kxya7n,"No reason for them to do that... After all, selecting a 30 mbps tier wouldnt prevent the 100mbps to be used. I think the partner might be actually losing money from doing that lol"
+kxya7n,"The partner would have less revenue/commission...  but it would make the sale much easier...  especially if the customer is working with 2 ""partners""...  1 is willing to sell it with lower license but the other is sticking to the ""proper"" pricing model.
+
+But that's gotta play out in the market to see what will happen (generally).  I think most will stick to the rules, but there's always that ""one guy"" that spoils it."
+ktfl5v,"At the data plane level, the Edge monitors latency/loss/jitter for each DMPO tunnel path and will route packets based on that information.  It evaluates those metrics multiple times per second.
+
+From the VCO UI, the QOE screen shows the latency/loss/jitter metrics from the best performing gateway path."
+ktfl5v,"Thanks for that.  So it's continuously monitor all paths peered Edge...  so for a large network, that a huge amount of tracking.  Is this where the realistic scale of 900 sites equating to 404,550 different paths to keep track of comes in?  As the marketing literatures says ""unlimited"" mesh size, but that seems silly...  nothing is truly unlimited."
+ktfl5v,"Each edge model platform has a concurrent tunnel limit.
+
+Static tunnels stay up 24/7.  Dynamic tunnels will established when traffic between two start edges is present and torn down when idle.  Dynamic tunnels stop being created when the limit is reached.  Once reached, traffic bounces instead off a gateway or hub that’s shared between two edges depending how things are configured.  This allows the mesh to scale.  If more concurrent tunnels are needed between sites, a bigger hardware appliance is needed, usually only needed at hub sites."
+kia5mx,"Yea I have hit situations like this.  I selectively whitelist ranges from Velocloud that my customers use.  You can see all their prefixes here.
+
+[https://bgp.he.net/AS53766#\_prefixes](https://bgp.he.net/AS53766#_prefixes)
+
+I normally do these and it covers the US Gateways.
+
+104.193.28.0/24
+
+104.193.29.0/24
+
+104.193.30.0/24
+
+104.193.31.0/24
+
+Know the security implications though.  These are shared IP Address with other clients."
+kia5mx,"Either
+
+1. Set a business policy to route the traffic for azure ad auth Direct (not multi path which goes via the cloud gateway). Then traffic will be detected by azure against your public IP
+
+Or
+
+2. Whitelist the IPs for the gateways assigned to your orchestrator.  You can do list paths in edge diagnostics to work out your gateway IPs."
+jndnvu,"If you connect your velocloud wan port to your modem and the work computer to the velocloud lan side anything that is connected to your modems and not the velocloud will be completely independent of the velocloud vpn tunnels. If you connect your home computers to the lan side or wifi side of the velocloud, then you open yourself yourself to their network."
+jndnvu,"You could implement segments for each type of network.
+The default Global segment can be used for regular home Networking. You can then create 2 additional segments, one for your medical work and one for the school. This way both networks are isolated and won't communicate with each other. You can then  create vlans within those same segments and assign interfaces to them. Say Lan 1 for medical, Lan 2 for school, Lan 3 for your TV.
+
+Some companies use segments for PCI traffic as an example
+
+And IIRC theres also a feature to make some segments private so that the destinations or web history isnt tracked and visible to the rest of the company that manages the edge"
+jndnvu,"You can have two of these devices behind a single modem/router. While each NAT to the same public IP the destinations for the Gateways would almost certainly be different. Even if they are the same part of the payload is a UID to ID one Edge from another just for this type of scenario.  
+
+
+Full disclosure, I work for a VeloCloud MSP."
+jndnvu,"At a high level I think I understand what you are suggesting, but to get into the details...
+
+I assume I would need define these LANs within my router, associating each network jack with it's respective LAN?  Is this something I should expect a home router like a Netgear Nighthawk AC1750 to handle?  Or am I misunderstanding something?
+
+If you have a good tutorial or resource, I am willing to do some homework."
+jndnvu,"Best resource I can give you is the documentation center: 
+https://docs.vmware.com/en/VMware-SD-WAN-by-VeloCloud/4.1/VMware-SD-WAN-Administration-Guide/GUID-E462C603-C931-4897-BFC2-7F61D15CD043.html?hWord=N4IghgNiBcIMoFMDmBbBA7ALgZxAXyA
+
+The segment stuff is Edge specific only. Your router shouldn't need extra configuration since thats basically just the edge's next hop out to the internet (WAN Overlay). 
+
+Though if I were you I'd leave the velo as the actual edge and keep your router for the segment dedicated to normal home networking. Something like
+
+Phones/TVs/home stuff > Netgear > Edge (Home segment) > Internet
+
+And then for your work you can:
+Laptop > Edge (Medical segment) > Internet
+
+Laptop > Edge (Education segment) > Internet
+
+
+And this is just one way of doing it. Theres more ways you can set up segments.
+
+Also Since the idea of having an edge is to connect your home to the rest of your company, the rest of the edges would need to be on the same segment. So the ""medical"" segment will be present in any other edge you have to connect to and have Cloud VPN enabled as needed. The other home segments can then have Cloud VPN disabled and thus other edges won't access the laptop for school."
+jndnvu,"building on the segment conversation, if the Edge has home network devices attached to the LAN side another type of segment you can deploy is the Private segment. Recently new feature. This segment forces all traffic associated with it directly to the net, with no fancy mitigation techniques. Additionally, all traffic is reported as generic traffic and on reports shows as the Edge's management IP."
+j5jibv,"The platform datasheet can be found at
+ https://wan.velocloud.com/rs/098-RBR-178/images/sdwan-712-edge-platform-spec-ds-0320.pdf"
+j5jibv,"They have the velocloud documentation, no edge model specific documentation. There is a get-started page for each model. Here you go : https://www.velocloud.com/get-started/edge-610"
+j5jibv,">velocloud documentation
+
+Can you please share that velocloud documentation with me. I have already read from the link you have posted."
+j5jibv,Here: https://docs.vmware.com/en/VMware-SD-WAN-by-VeloCloud/index.html
+iyanvc,"Do you have access to the Orchestrator?  First order of business is to look at the event log and see whether the Edge itself is restarting (either due to perceived power loss or other reason like software failure etc.).  If it's not restarting, then the issue may be upstream.
+
+Have you contacted the service provider?  What do they see in the CPEs (modem etc.) event log?"
+iyanvc,"The ISP says they aren't showing any drops through their own hardware. 
+
+The VeloCloud is registering a power loss that coincides with the loss of internet. However, we did swap the VeloCloud and changed outlets, but it keeps happening.
+
+I thought of getting a long extension cord to run it over to a completely different circuit at the site. I can't account for the power outage as nothing else seems to be going offline."
+iyanvc,Sounds like an issue with either the power cable or the Edge hardware itself if the BIOS is reporting power loss as the cause. Hardware failures are rare but they do happen.
+frj09x,You might get better luck asking this on our community page: https://communities.vmware.com/community/vmtn/sd-wan
+f0g2ey,"You are correct.  
+
+The pushback against the security team should be implementing a VNF or having internet zone traffic being inspected by something like Cloudguard Connect or Zscalar is a more effective solution and reduces the need for another box or two in each branch."
+f0g2ey,"You hit the nail on the head. Models we have don’t do vnfs (wanted Palos) so we’re running the branches through zscaler cloud vcgs. So I feel this combined with the security mentioned is enough. Would you agree? Or is there any value in running the traffic in transparent or routed mode into a context that’s just going acls, no later 7 or active Ips?"
+dp5fy9,Anyone running it yet?  Having some VOIP Call Quality issues on 3.3.1 and wondering if 3.3.2 might help.
+dp5fy9,On some Poc customers and Not having issues. What exactly is the Problem with 3.3.1? Did you take the hotfix 3.3.1 release?
+dp5fy9,"Hi, sorry, I did not reply to your message directly.
+
+On some Poc customers we are running 3.3.2 and not having issues. What exactly is the Problem with 3.3.1? Did you take the hotfix 3.3.1 release?"
+dp5fy9,"Haven't heard anything about a hotfix.  I am only a customer though.  We've been having intermittent voice call quality problems.  It's hard to catch in the act and we cannot be 100% sure it is Velocloud until we have a full length capture of the entire call end to end according to support.  I'm trying to catch that now.  In my current pcaps I do see a fair amount of out of order acks but cannot really tell how bad that is.
+
+What was the 3.3.1 hotfix about?"
+dp5fy9,"To be honest, not 100% sure about that, but the Image was named R331-20190925-GA-35295. So there was a hotfix. I think you should go for 3.3.2. It was released to one of our VCOs some time ago. Which VCO are you using? As far as I know, the update of VCOs is staged over some time, beginning in US."
+dp5fy9,"vco47-usvi1 is ours and it got the 3.3.2 along with our gateways.
+
+&#x200B;
+
+EDIT:  Looks like we did get the hotfix though.  We are on that build."
+dp5fy9,"you're right, VCO and VCGs are updated at the same time. So are you planing to update to 3.3.2 or already did it?"
+dp5fy9,"Nah, haven't upgraded yet.  We think we may have found the issue though.  There is a security device doing port scans we think may have been disrupting user traffic.  The characteristic is in the open issues in the release notes of 3.3.1.  I think it has been in the notes for a while though."
+dljsd3,"SOP: Release Notes 3.3.1 – September 2019
+This release is recommended for all customers.
+
+New Features;
+
+Single Sign-On
+The Orchestrator now supports using OpenID Connect to connect to third-party identity and access
+management providers. This feature has been tested and confirmed to work with Okta, OneLogin,
+PingID, and Microsoft Azure AD Connect.
+Automated Azure Virtual WAN Connectivity via VeloCloud Gateway
+The Orchestrator adds support for configuration of IaaS provider service principals (or “Subscriptions”),
+the first supported use case for which is that they may be used to configure Non-VeloCloud Sites
+corresponding to Microsoft Azure Virtual Hubs.
+
+Feature Enhancements in the following areas
+
+Cloud Security Service
+In previous releases, when connecting directly from an Edge to a Cloud Security Service, the only
+options for traffic routing were to send “All Internet” or “All Web” traffic to the Cloud Security Service.
+In Release 3.3.1, backhauling internet traffic to a Cloud Security Service can be controlled by Business
+Policy. This allows full split tunneling support with Edge to Cloud Security Service integration."
+dljsd3,"Thank you, have seen that."
+zpvmg5,"I think you may be getting confused with Enhanced HA, where you can't have the WAN connections on the same ports since it's just a single config for both devices. Standard HA the ports should match on both devices. 
+
+I work for a VAR who deploys a lot of Velo and we always put a backup/standby connection on the same port on both devices. Move that SFP connection on B to GE4 and connected to the other switch and you should be good."
+zpvmg5,"Port GE4 on VCE A is for LTE connection, and so is port GE4 (not SFP 1) on VCE B."
+zpvmg5,"Neolurch,  Thank you for the comments. I'll try that."
+ysfg69,"Hi
+for me, it depends how distributed your network and what failover you need. If your Fort is near, region/country, better to hub, less latency. Or If you  want to manipulate traffic through vpn tunnels  between two or more hubs. if not, then gw is your way."
+ygda6o,"Hello,
+
+""...surely if you had four WAN interfaces with **two tunnels per interface** (to another Edge)..."" - How did you come up with ""**two tunnels per interface**""?
+
+The number of tunnels per interface depends on the number of interfaces on the other Edge. For instance:
+
+* Edge A has 4 WAN interfaces/links, and Edges B has 2 WAN interfaces/links, then you have total 8 tunnels (4\*2 =8) between two Edges.
+* Edge A has 4 WAN interfaces/links, and Edges B has 3 WAN interfaces/links, then you have total 12 tunnels (4\*3 =8) between two Edges.
+* Edge A has 4 WAN interfaces/links, and Edges B has 4 WAN interfaces/links, then you have total 16 tunnels (4\*4 =16) between two Edges.
+
+Hope this helps!"
+ygda6o,"Thanks for the explanation - yes, this helps!
+
+The two tunnels per interface bit was what I understood from the doc (""Each WAN link (public or private) an Edge uses establishes two tunnels with another Edge or Gateway: one inbound, and one outbound"") and I guess this is what threw me.
+
+So for my use case (two WAN interfaces only on each Edge), I take it that Edge A and Edge B will only need 4 tunnels (2*2) which is better than I thought..
+
+Thanks!"
+ygda6o,👍
+y31z83,"It just means that there is no specific overridden configuration for Wi-Fi. So you can use it as long as is not a 6x0N hardware. 
+To answer your first question: it’s not possible to use Wi-Fi for Wan transport."
+y31z83,Makes sense.  Thanks for the quick answer!
+xxeuh0,Is port 2426 udp reachable from internet on the hub site?
+xxeuh0,"This first point
+Second in hub you have static IP ?"
+xxeuh0,"Thanks for posting, 2426 was open"
+xxeuh0,"You my friend are a life saver, yes it was the fact the hub site was behind a router using a private IP."
+xxeuh0,Didn’t get that
+xxeuh0,Hub also need to have its ports forwarded if it is behind a NAT device
+xfb0t4,"Hi 
+Make 2 profile Hub profile and spokes profile
+And enable non sdwan tunnel only on hub."
+xdd4q7,AFAIK not possible. What is the usecase to connect the sites to the Gateway? Why not connect them directly?
+xdd4q7,Maybe routing is missing for these two locations
+xdd4q7,"\- to have a simple to understand and administrate setup (everything is connected to the vmware pop)
+
+\- a simpler migration process
+
+\- limitations on ipsec sites
+
+But after reviewing the prices: of course vmware do not want traffic at their pops they do not get paid for.
+
+Thank you! :)"
+xdanrm,"Effective throughout should be 170 mbps, though there will be classification of public wired and private wired."
+xdanrm,If you have 2x1 gig links it depends on the max throughput of the device and also license. I guess for 2x1 gig links max throughout is 4 gig. This model doesn’t support 4 gig throughout if I remember correct.
+xdanrm,"https://wan.velocloud.com/rs/098-RBR-178/images/sdwan-712-edge-platform-spec-ds-0320.pdf
+
+It’s not the newest version but specs have not changed. 610s have 200 Mbit enhanced HA throughput. So your WAN links will be the bottleneck."
+xdanrm,License will not impact throughput.
+xdanrm,"While your answer is correct in terms of throughput, please note that datasheets are now part of our public documentation and you can track updates there:  
+
+
+https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-9943A130-CD6C-4653-AB36-6A396EA8C677.html"
+xdanrm,"That’s very good, I already came across this page. The PDF is just a little bit more handy. Will this PDF also maintained?
+Another good point is the changelog at the end of the file. That’s something I’m really missing on the official docs and KB."
+xcl4is,"Is this a single port modem? Is it running dhcp? If so, reboot the modem. The single port modems usually lock onto a MAC and will not  give IPs until it’s rebooted. Secondly I had an issue (worked for MSP) that some modems didn’t work with VCEs. No matter what you did, it never came up. Is this by chance technicolor modem? Not sure what NBN means"
+xcl4is,"Regards ""reboot only standby device"" :
+
+A bit dirty, but you still may like it:
+
+\-estimate your luck/business hours, perhaps better outside business hours.
+
+\-logon to active edge using ssh
+
+\-find IP of HA standby neighbor
+
+\-login to standby neighbor IP (via active)
+
+\-type: reboot
+
+left a few details out, but if you have trouble with that, you probably should no execute it.
+
+&#x200B;
+
+Regards"
+wqqi43,"what model of edge are those?  
+I would expect the color of the front LED to be blue, since solid blue means it is running as Standby in HA. Is it a pulsing white, or solid white?   
+
+
+For reference this KB has the LED status codes:  
+https://kb.vmware.com/s/article/2828742"
+wqqi43,Can you please share where exactly you connect the cables??
+wqqi43,"Hello, 
+Why you use mpls on both devices? If you use EHA mode enough one wan on active vce and another wan link (mpls) on another. 
+In your case that you’ve described, you are using some kind of mix SHA and EHA, not sure this will work."
+wqqi43,"Based on what I read when setting up our sites, you can’t do it this way. The velo automatically blocks ports for failover and you are likely confusing it.
+I’m pretty sure the enhanced HA can only have one wan link plugged into each Velo. 
+
+Is there a reason you are not using the standard HA? Seems like this is the way to go if you need the MPLS to breakout to each velo. 
+
+I just use two little 8 port linksys for breakout switches, one for each wan connection. Only requirement as far as I know is they need to support STP."
+wqqi43,"you can also run E-HA even when you have
+
+Active Edge: Port X -> uplink/internet A  
+Port Y -> uplink/internet B
+
+Standby Edge:  Port Y -> uplink/internet B
+
+This is being used in many sites atm."
+wqqi43,"Yes, mix and match works but eHA has still a lot limitations. I would just recommend it for really small installations."
+wqqi43,"Hi, 
+Is not clear, why this is needed. If you have enough  links use SHA, all wan on each edge. 
+if no - use EHA, one wan link per edge. 
+What is the profit of using mix mode."
+wqqi43,"I agree, maybe you got me wrong. Best solution is always full ha. Run into to many issues with eHA"
+wastot,"not quite  
+Is the factory version 2.x ? If so, Support will replace the device for you since those old versions can no longer activate on VCOs  
+If the support contract is expired (likely since its a 500) you could see about renewing the contract and get a newer device at the same time"
+wastot,"factory version is 1.8.2, long past expiry. This is just a spare old edge that we use as demo to newcomers. So in order to upgrade to newer release like 4.2.x, there would be a 2 step process. First upgrade to 3.x then another upgrade to 4.x. I was just curious if I could just replace the factory image but seems unlikely to be possible.
+
+https://i.imgur.com/XA3eObf.png"
+wastot,"Hi, 
+If you could upgrade to 5.0.0 and from cloud vco  new GUI you could upgrade factory software."
+wastot,"thanks for the reply, I'll try this once the 5.x firmware is added to my VCO"
+vmcy25,Yes best bet is to create a NonSdWan tunnel via the gateway and use with multiple edge sites. Then you can create business policies to push traffic like you said.
+vmcy25,"yes its exactly what NVS/NSD is for. create the tunnel, check its status under monitoring, enable it on the profile level and create a Business policy using it. that should do it"
+vls8b1,"Hi, the main point is for what purpose you want to use this new Hub site and what current SD-WAN infrastructure you have. If you use Dynamic branch-to-branch connection within Branch profile and want all branches connect directly to new DC over static tunnels, yes it's ok. You can use it as second HUB in Branch Profile, but in any case traffic will go directly through second HUB to new HUB subnets. Just keep in mind if you need traffic flow between this two HUBs you need additinal configuration in HUB Profile. Also do not forget about you SD-WAN subscription, with new HUB additional tunnels will be established, if you have essential subscription, there is tunnel count limitation."
+vls8b1,"The main purpose in this case is actually to route some web traffic via this particular DC.  I reckon another HUB would work but due to the licence considerations you mentioned I’m thinking about using a non sdwan destination / IPsec tunnel instead.  I’ve posted a seperate question regarding the use of a non sdwan destination.
+Thanks for the reply"
+vl1wte,"Our normal process would be to bring up a hub in the HQ along side the current setup making sure to announce routes in/out of the Velo and core HQ L3 device. This would include any HQ routes plus remote sites routes to allow for B2B connectivity between SDWaN and non Sdwan sites. Enable branch to branch on the edge profile for Velo to Velo communication. 
+
+Then migrate site by site. Keeping the FW at each site would depend on your security stance on whether you need the extra security over the basic FW in the Velo."
+vl1wte,I recently undertook a similar migration with much the same approach neonlurch describes. In my case I just static routed between the HUB and HQ  core.  I ended up using the Velo firewall and pulled out the ASA’s.
+vl1wte,"Curious to know how to bring it along side, the velo device need to be connected to the same core switch like the main firewalls ? Once connected does velo have enough intelligence to learn about routes ? Or should I configure it manually ?"
+vl1wte,"In my case the customer is using FW at the remote sites  mainly for ACLs to let a specific destination/services to the internet, do you think velo can do the same ? 
+
+However the Firewall @ HQ (a peer of checkpoints) is using advanced FW features, like web filtering, spyware and malware detection and a lot of VPNs with 3rd party vendors - do you think this one can be replaced with Velo or should exist along with.   ?"
+vl1wte,Yes I would connect it to the same core device and use BGP to exchange routes between the two devices. You can also use OSPF or static routes but BGP is usually easiest and most flexible if you need to manipulate routes.
+vl1wte,"
+The Velos will do the job just fine in your case on the edge however you should use a default deny and permit what you want rather than default permit and deny what you don’t want.  At least that’s what VMware guy told me.  
+
+With your web filtering  you could use a business policy on the edge to route all web traffic to the hub and through the checkpoint.  You could also try out the Sase  cloud web filtering stuff that I think Is now available but could be too new."
+vaion1,"So you are kind of mixing terminology with your interfaces. Could just be how you are explaining it but normally if you add a VLAN to the Velo you would need to then add the VLAN to a switched interface. Having two LAN routed networks is fine as well just trying to clarify. 
+
+Also anytime you add an interface or change an IP it’s going to cause an edgeD service restart which in an HA pair would cause a failover event to the other box. HA interface should have came back online though."
+vaion1,"Thanks for the reply. 
+
+I quite likely am mixing up terminology.  To be clearer, I look at an interface in the gui.  I can add an IP directly to it in routed mode and assign a VLAN. I can also leave in switched mode and assign a VLAN which I previously created and allocated an edge lan IP.  My goal is to have another interface I can route through but not participate in the overlay. I see the current LAN interface is a switched access port with a VLAN assigned.  Maybe I should just setup like that. Probably either way is ok and I just panicked when I saw the failover.  The secondary box needed a full power cycle to come back online though. 
+
+Cheers"
+vaion1,I now have the interface up and stable.  I’m seeing the Mac flapping between the two interfaces across my HA pair.  Is it the switch that should be blocking the port or the Velo ?   My other LAN links are not behaving like this.
+vaion1,"You mean you see it flapping between the two Velos? Normally the Velo will block the standby device and your switch should be forwarding on both sides. Then during an HA failover the VCE would flip the virtual MAC to the other device and block the standby ports. 
+
+I know I just had a customer have some HA issues with dual-active on 4.2.2 that was helped with an upgrade to 4.3.1. Looking at the release notes it looks like there are a few open issues with dual active scenarios."
+vaion1,"Yeah between the velos.  I am also running 4.2.2 ! 
+I’ll check out the release notes.
+Thanks"
+v1xgaa,There's quite a few.  What geo are you looking at?
+v1xgaa,"It's been a while, but here's a janky way you can find out which GWs you have assigned to your VCO account.  Create a private WAN link and enable the SD-WAN Service Reachable box.  That will populate the Public IP boxes with all the VCO and VCG IPs you would need to put in your allow-list.
+
+See screenshot in step 6:  https://docs.vmware.com/en/VMware-SD-WAN/3.3/VMware-SD-WAN-by-VeloCloud-Administration-Guide/GUID-0B3A518E-96B5-4B1C-BD08-8A3AEA3FE039.html
+
+Each VCO will have its own unique set of VeloCloud Gateways (VCGs) however there may be other VCGs in that same PoP that are in a different VCO's pool.
+
+Definitely discuss with your sales team if you have regional requirements so they can find the best VCO with the VCG pool appropriate for you.  If they're missing your region, you can always request additional regional VCGs based on your opportunity size.
+
+If you're going with an MSP, it's also possible that they'll have their own set of MSP-managed SD-WAN gateways (partner GWs) as well."
+v1xgaa,"it's a global customer so pretty much everywhere, but they will migrate gradually due to different subsidiaries having their own qualification procedures.   
+I just want to understand what the hell they mean by PoP and what kind of SLA's are there - like can they really deliver the same experience over PoP in VMware infra VS PoP CSP infra. Or will there be small print about shared IPs and ""maintenance windows"" and all that crap that comes with ""Cloud""."
+v1xgaa,"I don’t think there is a published list of all the Velocloud PoP’s but your account or sales team should be able to answer those questions for you. But as far as PoP or “Point of presence” it’s just a DC that has Velocloud servers in a rack running some or all over the components of the Velocloud solution. Yes, there will be maintenance windows for upgrades and security patches, but that is just as relevant for any (cloud, hybrid, on prem) solutions that are well maintained."
+v1xgaa,"they've been kinda quiet, guess the recent acquisition got them busy...are you using it? Initially, customer wants the US and Western Europe."
+v1xgaa,"Yes i do use it, more than I’d like to on some days 🤣. i checked my US based VCO (Management portal server) and i see PoP’s in France, Switzerland, Italy, Germany, Netherlands, UK, Ireland and Sweden. Plus they have PoP’s all over the US… VA, CA, TX, IL, FL, WA,ND, CO, NY, GA. There maybe more i cant see but but most of US and EU\UK is very well covered."
+v1xgaa,"Cheers man,
+Is it any good? 
+Caveats?
+Are there any limits on throughout per PoP? 
+Again I'm seeing different data out there - 150 Mbps to 750 Mbps."
+v1xgaa,"It’s going to be VCO specific but the list you provided is a lot of the common ones we see. Plus India, Japan, South Africa, Singapore, Sydney, Brazil as well."
+su7n0q,Did U get any solution to this problem? If so please share.
+su7n0q,Remote Diagnostics - > Clients
+su7n0q,Nope never arrived at resolution.
+soywa5,Have you performed a capture ?
+soywa5,Yeah.. check the release notes for 4.2 to see if it has any anything corresponding to this icmp issue. I haven't  seen this issue at all. May be have TAC to capture bundles and investigate.
+soywa5,Nice..there are lot of them in 4.x.x code.
+soywa5,I encountered similar issue with 2 edges today..going to create tac case
+soywa5,"Thanks Mate, just want to confirm once before i upgrade them to 4.2.2 as we have to ""prove"" its a vmware issue :-p"
+soywa5,In terms of ICMP I see the ping enter the WAN but no reply in return. Other than that just a lot of UDP traffic which I guess is normal.
+soywa5,Yeah it's a bug and apparently we're the first. VMware creating a hotfix.  I'll share the details when I have.
+soywa5,"When a PPPOE Wan link flaps, the default GW is not correctly installed for traffic going direct.  A reboot resolves the issue or setting multipath for everything.  VMware have hotfix in the works but also fixed in 4.3.  VMware have not provided a big ID."
+soywa5,"VMware eventually decided it was fixed in 4.2.2
+We upgraded the edges from 4.2.1 to 4.2.2 and it does appears fixed."
+sgev6o,Probably a reboot.
+sgev6o,"First, I would ask why removing the HA solution? There must have been a reason to implement it at the start. Why no longer appropriate or needed now?
+
+Yes, the config needs to be changed.
+
+And the WAN connections moved over to the 'remaining' VCE.
+
+Depending on your setup, will no longer need the additional switch and cabling associated with that.
+
+Considering the question, I would schedule a couple hour maintenance window just to be safe. Give yourself enough time to recable, make config changes, reboots, testing, etc."
+sge8sf,"I have a few questions about this. You mention interfaces but each interface is different depending on model number. As far as your network a /32 is a subnet where only 1 IP exists. So if you have two separate /32 they are NOT in the same subnet. Did you mean /30s? Or /31s?
+
+Edit: Added a question"
+sdgbuk,"Max path set to one on the Nexuses?
+
+I strongly suggest you run BGP here because you'll create a loop readvertising overlay routes from one VCE to the other.
+
+Are they in HA or cluster mode?  HA means one is stand-by and not actively participating in anything for the most part."
+s2ced2,https://docs.vmware.com/en/VMware-SD-WAN/3.3/VMware-SD-WAN-by-VeloCloud-Administration-Guide/GUID-216C9DD3-D88C-46D1-98A9-B6D3B4A4B1A7.html
+s2ced2,Fixed… devices required reload after applying config….
+s2ced2,"Have you enabled the OE2 route to be advertised to the overlay , by default only the prefix associated with the interface will be advertised."
+s2ced2,"???
+How this helps??
+Can you please explain what exactly should  look for?"
+s2ced2,All other routes are learned from the switch and advertised in overlay. But they are LSA type 2 ( inter area routes ) not external OE2 LSA type 5
+s2ced2,"The subnet between core switch and fw, is it advertised as well to the overlay??"
+s1a180,"You can do it at Profile Level or at Edge Level:
+
+&#x200B;
+
+Profile Level: To apply for all the edges that are using the profile.
+
+Navigate to, **Configure > Profiles > {Select your Profile} > Go to Firewall Tab > Firewall Rules > New Rule > Match Application > Define > search and select  the application > Set the Action to Drop.**
+
+&#x200B;
+
+Edge Level: Applies only for the selected Edge.
+
+Navigate to, **Configure > Edges > {Select your Edge} > Go to Firewall Tab > Firewall Rules > New Rule > Match Application > Define > search and select  the application > Set the Action to Drop.**
+
+&#x200B;
+
+Thank you"
+s1a180,"  
+Thanks for your feedback, but it doesn't work. The rules do not apply we still have no blockages on the targeted sites"
+s1a180,"Okay, if you want to block sites.
+Then in the firewall settings, 
+ Go to, Destination > Specify {use the Domain Name field: fill the target domain name} and set the Action to Drop.
+
+This will definitely work."
+qqrbko,"couple of things:
+
+is 8.8.8.8 reachable through this mpls link? edge will try to resolve your vco name during activation. if it is not available, you will need to replace the fqdn in the activation link with the public ip address of ur vco. 
+
+make sure theres nat rules in place for mpls site (can be 1:many). you will also need check to service reachability option as you mentioned and advertise those routes in ur mpls underlay or rely on a default route to a internet breakout location like your data center(unless ur sp provides one
+
+during activation you will have to wait for edge to retry a couple times."
+qqrbko,"Does not work with MPLS. It will use the circuit after activation, but since it is a private interface, no dice on management or activation. We had a location during our deployment of 21 branch sites that we could not get an intermet circuit pulled to for a reasonable cost. The answsr we found was to create a virtual internet circuit on our att mpls circuit. Works like a charm and, at least with att, is easy to do."
+qqrbko,"Thank you so much, this makes so much sense now. I'll try this out tomorrow and get back."
+qqrbko,I would like to add that you also have to allow outbound UDP traffic on port 2426 on your FWs for the branches that use the Datacenter's Internet link. Otherwise the Edges connected to MPLS only won't be able to close the tunnel to other sites over the internet and/or the cloud gateways.
+qnhklf,"as I now  
+default OSPF (advance options) are:  
+  
+for Inbound Learning the  default action is ""Lear""  
+for Router Advertisement the default action is ""Advertise""
+
+You shouldn't move at least you want to do route filtering.  
+
+
+So weird that you lost the connection when you move the path cost, it could be a bug.  
+
+
+OSFP routing works well with only one interface with the default cost?  
+OSFP routing works well with only one interface with a non-default cost?.  
+
+
+Try to take a packet capture of the VCE interfaces when you do the changes to see the OSPF messages between the peers."
+qlcqmm,"Show OSPF Route Table shows OSPF routes (both learned and redistributed)
+
+List OSPF Routes shows OSPF routes learned from OSPF with actions such as inbound filter, VCO's OFC action applied
+
+We'll work on how to make this less confusing, thanks for the feedback!"
+qi3b1f,"Considering that you can't really configure it nor use any of its features and services without the VCO activation... not much  
+Any VCE pending activation would work as a glorified paperweight. A netgear home router would be more useful.   
+
+
+And to activate it, you'd need to subscribe to the VMware SASE services... At which point you might as well get the device officially"
+qi3b1f,"Dell is taking forever to RMA stuff these days.  You should weigh your edge, see the value of that much gold, and then double it."
+qi3b1f,Thanks for letting me know. Appreciate it.
+qhz51z,If I make the CORE-2 OSPF interface passive will the VCE begin routing to CORE-1?
+q96ah3,"Hey guys, apparently there is a VDSL modem available in an SFP form factor for th 610 and above.  Wondering if anyone has seen this in action? Curious about stability etc
+
+Cheers 
+
+Matt"
+q96ah3,"Hey, there is a large SP in Europe that has deployed this to several thousand sites without issues."
+q6ung7,"Port channels are currently not supported, no. VCEs also do not support Spanning Tree, so take that into account when configuring the switches to prevent L2 loops."
+q6ung7,"So if I had a single VCE with a trunk from GE1 down to a core switch and another trunk off GE2 down to the other core switch, would one of the switches place it's uplink port to the VCE into blocking mode due to Spanning-tree?"
+opnfe3,"what do you mean by ""I recover the communication after 1 minute""? if you lost 15 pings and assuming windows default value of 2 seconds between successive pings that is 30 seconds. In my testing I observed around 15 seconds to failover which is still above the velocloud promised value of sub-second failover."
+opnfe3,"What release are you on? Usually you should only lose a single ping, maybe two, when you trigger a failover. There was a bug in a 3.X release that could cause a failover to taker over 30 seconds, but that should have been fixed by now."
+opnfe3,"It's weird.  
+In my lab environment using VCE 510 it took about 1 minute to recover the communication, but yesterday I set up a failover configuration using VCE 640 boxes and the switch-over was instant, I just lost one ping.  
+The configuration on both scenarios is similar.  
+[HA Topology](https://imgur.com/PB76Cpj)  
+[Convergence time](https://imgur.com/mQk2Jj0)"
+opnfe3,"Scenario 1.  
+Fail-over convergence time: 1 minute.  
+Hardware: VCE 510, Software version: 3.4.4  
+VCO version: 4.3.0  
+
+
+Scenario 2.  
+Fail-over convergence time: instant (less than a second)  
+Hardware: VCE 640, Software version: 4.0.1  
+VCO version: 4.3.0.  
+
+
+Do you think that the issue in scenario 1 is due to the software version?"
+opnfe3,the difference between the two models is that in 6x0 the routed ports have DPDK enabled which makes them faster. Did you configure the LAN port as switched or routed in both scenarios?
+opnfe3,I am not sure if 510 also had that bug in 3.x but 520 and 540 definitely had that failover issue. So updating to 4.0.1 should fix this problem.
+opnfe3,"Thanks for your feedback, I'm going to upgrade and try again."
+om8bna,"That’s a subjective question. Enterprise ready could mean a variety of different things. However the leaders in the SDWAN world have been used in large enterprises, 1000+ edge nodes etc. some of the larger players have I believe are way north of that number of edge nodes.
+
+Best way to test SDWAN is get some POC devices and test them in a controlled environment. You can then make your own decision if SDWAN is viable for you especially $wise.
+
+I look after a pretty sensitive enterprise with about ~300 edges. It’s very very good. 👍
+
+Your local rep could show you small and large enterprises who have been using SDWAN successfully. You could even talk to them if they don’t mind about their experience.
+
+Hope that helps"
+om8bna,"It's been nothing but a headache for us, but that's because it got sold to our company as a managed service, and one that I can't control."
+om80lh,"Thats interesting, did you talk already to VMware about that?"
+om80lh,"Hi, didn’t ask vmware yet on this one."
+om80lh,"Hi /u/iafilius - Release 4.4.0 was the initial launch of our SASE service. Because of this, we are working closely with partners who do initial deployment of it. There is no long-term change to what is posted on My VMware and it will go back to ""normal"" in 4.5.0. 
+
+If you have a use case for testing 4.4.0/SASE on-prem, reach out to your account team."
+om80lh,Thanks
+om4xa6,"Did you check out the resource here:
+
+[https://kb.vmware.com/s/article/67575?lang=en\_US](https://kb.vmware.com/s/article/67575?lang=en_US)
+
+&#x200B;
+
+I can see the chrome browser extension to be useful"
+om4xa6,"Hi, i didn’t actually read the article before. Although use developer mode al the time for investigating.
+
+The plugin is old but new for me.
+Works well to visually go through the api call’s.
+Not so suitable to copy raw data.
+
+Thanks for pointing out."
+ncdeso,What kind of WAN do you have? It may be some kind of shared media.
+ncdeso,"Could it be the ""VeloCloud"" cloud IP network that your traffic gets routed through?"
+ncdeso,Did you get this issue sorted out?
+ncdeso,Unfortunately no.
+ncdeso,This will be happening when there is no gateway configured on an interface. An edge will be sending ARP requests for each remote subnet you are trying to ping/traceroute from the remote diagnostics.
+nbdhpl,"[https://i.ibb.co/5Fcfbcx/Screenshot-3.png](https://i.ibb.co/5Fcfbcx/Screenshot-3.png)
+
+This is what I am talking about.
+
+Arout 20+ client are on that location."
+nbdhpl,"Those amounts for the applications are very low. I don’t think you have enough or the right data.
+
+What is the time period elapsed of the report? 
+Is traffic actually passing through the edge? 
+Are you sure your Netflow is working correctly? (The report looks like a Netflow based one)"
+nbdhpl,"What is the time period elapsed of the report
+
+**24h.**
+
+Is traffic actually passing through the edge?
+
+**Yes. And only through the edge.**
+
+In the link below is screenshot of **Transport** tab. You can see traffic for 24h from that location are 31GB in Total.
+
+[**https://i.ibb.co/tb1CF7P/Screenshot-1.png**](https://i.ibb.co/tb1CF7P/Screenshot-1.png)
+
+What can I do to show full traffic data?Cant find any option on the Edge.
+
+And why are 0 in Received column."
+nbdhpl,That is odd.  What version of Edge firmware are you running?
+nbdhpl,"I have found solution. 
+Default route does not allow Policy packet inspection analysis (third tab)
+When I removed default route, and create any any policy, everything works well."
+mpcu0e,That is totally depend on the utilisation
+mpcu0e,">utilisation
+
+Utilisation of what?"
+mpcu0e,Of course the bandwidth utilisation.
+m6cyiy,"Screenshot doesnt show much, but is this a monthly usage? If so, it looks within expected values.   
+If you would like some more insights, you can open a support case to have someone review this for you and maybe come up with a small workaround (such as reducing tunnel count)"
+m6cyiy,You can have one link as standby to save the data. In that case the tunnel will be initiated only in event of failure
+m6cyiy,"4-6 GB per month on the primary link and 1-1.5 GB on the second link for control traffic. So for control and management traffic you should see 250MB/day max. 
+
+Something is up here for TX to be that high. Please open a support case."
+m6cyiy,"Disable bandwidth testing on metered links. This is likely what is eating up your bandwidth (been there, done that..)."
+m6cyiy,"DAx256 is on the right track.
+
+What's time timespan we're looking at?  There will always be an ambient level of control traffic to maintain the tunnels.  Reduce the number of tunnels to reduce control traffic."
+m6cyiy,"Just did, thank you!!"
+m6cyiy,"Thank you both for the help. I know there will be some control traffic but 600MB per day seems pretty high. We have another velocloud with a single Verizon modem and it's data usage is much lower.
+
+This reading was for 31 days. We do not use any advanced features, it's basically just a router for a small office of team members. No VPN back to headquarters, no 802.1x, it's blocking nextflix and a few other streaming services and that's it. We basically use it as a link aggregator for the modems."
+m6bxt2,"
+1. Make sure you configure the profile to build the Cloud VPN
+2. Assign the VeloCloud Edges to the desire profile
+3. For each VCE connect a WAN interface to the PtP link and assign an IP address indicating the respective default gateway, those IP addresses will be used to build the overlay
+4. Make sure you can ping the VCEs WAN interfaces each other. 
+5. Make sure the udp por 2426 is permitted between the Edges. 
+That should be enough. 
+
+PM, I'm available to help u."
+m6bxt2,The mgmt traffic will not pass through the another vce. It has to be direct
+m6bxt2,"Thanks 
+
+I have assigned IP on the WAN interfaces, configured cloud VPN and created private overlay. Even though Velo doc says VCMP tunnel initialization packet does not go to gateway in case of private overlay, I can see that it is attempting UDP 2426 connection out to the gateway. On the CLI it showed link dead even though I am able to ping each VCE. I got it working by steering traffic to this private overlay when going between the two VCE. After that I can see the overlay listed in orchestrator."
+m6bxt2,I have a second link for mgmt traffic to orchestrator through the VCG. My setup was like this [https://imgur.com/2EndM39](https://imgur.com/2EndM39).
+m6bxt2,Let me check on this in mrng and will feedback
+lw8maq,If link speed is <200Mbps use slow start.  If link is >200Mbps use quick burst.
+lw8maq,So what exactly does Slow Start do.  How is it different from Burst Mode?
+lw8maq,"Slow start blasts 200mbps between edge and the primary VCG for sustained bursts and sees what % arrives at the other side.  The purpose is to weed out providers allowing bursty traffic and find the true sustained speed.  Burst does shorter intervals at higher rates(not sure the number but at least 1gbps).  It doesn't detect bursty links as well, but usual not as big of a deal at higher rates."
+lsi0tn,"1. Likely higher than those on this list.  Not sure what Versa costs but the others are cheap.  In general though, Velocloud is pretty middle of the road to higher in terms of cost.
+2. You can buy the hardware outright or Opex it (monthly charge).  Plus the cost of the software.  All of these come in 1, 3, and 5 year terms.
+3. Yea you can co-term.  VMWare is pretty flexibile with that sort of things.
+
+It's hard to point you to pricing stuff because it's not really public which sucks.  I am not on our sales team myself (I'm one of the engineers) but I can point you to someone on our Sales Team if you're looking to price out a deployment to help compare.  We are VMWare Partner which gets us some discounts off retail."
+lsi0tn,"Thank you. It is a shame that information is not more readily available. Please do DM me the best way to reach someone on your sales team (where are you based?) - we're still at the starting point of our research so we're looking at the market broadly, but I might reach out after, once we're slightly more prepared to make decisions.
+
+Would you also know if we would normally have to pay for the 1,3,5 year subscriptions upfront or are there options to pay annually? monthly?"
+lgekz2,"Multi path itself won't ensure traffic goes through the cloud gateway. I don't think that's possible here if the devices are on your internal network. 
+
+Instead you could Backhaul the traffic via your Hubs. This would prevent site to site tunnels being created.
+
+Also consider creating a Segment for these devices at eacj location on a separate VLAN and disabling branch to branch VPN there forcing the data to go via the Hubs."
+lgekz2,"There's no way to enable Dynamic Branch-to-Branch but exclude a subset of traffic from triggering those tunnels - this configuration you're describing won't do it. Is Dynamic B2B currently enabled for other traffic that requires it?
+
+There's no harm in what's happening though - just a noisy alert as you noted."
+lgekz2,This. Haven't yet seen a situation where branch to branch is a good idea. Start using hubs.
+ktacbn,"Its possible but with a lot of limitations and extremely specific requisites.   
+I would not rely on this feature for any deployment, just a ""nice to have"" kinda things"
+ktacbn,"You can only aggregate WAN links if the destination is behind another Edge or Gateway.  The Edge will build two DMPO tunnels to the remote Edge/Gateway and then split the traffic between them.  There is some overhead as the packets are incapsulated.  Also if the two links have significant latency differences the remote end Edge/Gateway, it won't aggregate.  Like DAx256 mentioned, it's possible but your mileage will vary.  Best case scenario you may see 80-85Mbps for a single flow.  Worst case, you see the throughput of one of the links."
+ktacbn,"Thanks to both of you for the quick responses! That's kinda what I expected.  
+
+
+We're already deployed across 7 sites but I got a very specific request from the owner of the company so I wanted to make sure I was informed before penning any response!"
+hn9igc,There's no reason that VeloCloud would cause application-specific latency problems and there are a lot of joint customers using this combo (including VMware). Do you have direct access to VeloCloud Support or is that provided by your MSP?
+hn9igc,We do not have any direct contact with velocloud unfortunately. It all goes through the MSP. We are attempting to break contract with them for breach of contract. They make changes in the middle of the night and cause outages. Windstream is the MSP and they are horrible. We have asked them / demanded that they not make changes to the config without our consent. We have the top noc on duty on speed dial it seems. We did switch from our sdwan and broke out the individual isps via a cheap 1 gb 8 port switch and were able to levy that routing to circumnavigate the velocloud and we are getting much better results.
+he2y4m,"Deploying Virtual Edge inside of IaaS gives you:
+
+1. DMPO end-to-end
+2. Simple full-mesh VPN 
+
+So I guess my main questions would be how much traffic are you sending to AWS/Azure and whether you have a use case for Azure <-> AWS traffic."
+he2y4m,I've done both and the non Velocloud site is cheaper and easier to setup. I struggle to think of any advantages of deploying a virtual edge.
+glvimk,"You should be able to find it from the orchestrator remote diags   
+
+
+Test & Troubleshoot > Remote Diagnostics > \[edge name\] > VeloCloud MIB  
+
+
+This will be a button that you can click and it will download the MIB"
+glvimk,"Anyone able to provide the VELOCLOUD-EDGE-MIB? We're on a hosted solution and have SNMP access, but no access to the MIB via the VCO. I have the VELOCLOUD-MIB though. Hosted support says they don't have it......"
+glvimk,Got them. DM me and I'll send them. Not sure of the file share link posting policy here.
+glvimk,"That's the VELOCLOUD-EDGE-MIB ... which requires the VELOCLOUD-MIB   
+(See the link in OP:  Section ""Before you begin"")"
+glvimk,Did you find the VELOCLOUD-MIB? I need it also. I have the EDGE MIB but I need the supporting one. The doc just says check the website.. which is useless.
+glvimk,"    -------------------------------
+    -- VeloCloud MIB Definitions --
+    --                           --
+    -- Contains:                 --
+    --      .velocloud(45346)    --
+    --          .orchestrator(1) --
+    --          .edge(2)         --
+    --          .gateway(3)      --
+    -------------------------------
+    
+    VELOCLOUD-MIB DEFINITIONS ::= BEGIN
+    
+    IMPORTS
+        MODULE-IDENTITY, enterprises    FROM SNMPv2-SMI
+    ;
+    
+    velocloud MODULE-IDENTITY
+        LAST-UPDATED        ""201908020000Z""
+        ORGANIZATION        ""VMware Corporation""
+        CONTACT-INFO        ""postal:    VMware Corporation 
+                                        World Headquarters
+                                        3401 Hillview Avenue
+                                        Palo Alto, CA 943043
+                                        USA
+                            
+                             web:       www.velocloud.com
+                             email:     contact@velocloud.com""
+        DESCRIPTION         ""Top-level infrastructure of the VeloCloud enterprise MIB tree""
+        
+        REVISION            ""201908020000Z""
+        DESCRIPTION         ""Implementation of VeloCloud Edge MIB Objects""
+        
+        REVISION            ""201701180000Z""
+        DESCRIPTION         ""Implementation of VCO MIB Objects""
+    
+        REVISION            ""201701130000Z""
+        DESCRIPTION         ""Inital definition of VeloCloud MIB Objects""
+    ::= { enterprises 45346 }
+    
+    modules                 OBJECT IDENTIFIER ::= { velocloud 1 }
+    
+    END
+    
+
+Gotcha. yeah that one is a tricky to get a hold of. I dont know where in the website that is. Usually the customer has to reach the partner or VMW for it (depending on who u bought it from). Anyhow, here you go!"
+glvimk,Wish I did. I don’t understand why its so hard.
+glvimk,"Sorry about that, the mib /u/DAx256 provided is correct.
+
+This was a miss in the original implementation of the MIB download feature and the latest releases include the ability to grab both directly from Remote Diagnostics."
+glvimk,I guess it is offered in the webui in version 3.4 but not 3.2/3.3
+glvimk,Thanks for that!
+fqla33,"There is a Deploy & Manage course on mylearn.vmware.com and you can take an on-demand lab as part of this as well. It’s a one-day course. See if this matches what you’re looking for.
+
+**Course Overview**
+During this one-day course, you gain an understanding of the architecture and features of VMware SD- WAN by VeloCloudTM. This course provides extensive hands-on labs in which you enable core SD-WAN features, such as ensuring application performance using business policies, traffic redirections, and network service insertion.
+
+**Course Objectives**
+By the end of the course, you should be able to meet the following objectives:
+• Discuss the SD-WAN architecture and platform deployment model options
+• Identify and describe the SD-WAN solution components
+• Explain the interaction between the SD-WAN Edge, Orchestrator, and Gateway components
+• Describe the SD-WAN Software-Defined Networking (SDN) approach, traffic, and network flows
+• Explore SD-WAN core features and evaluate how these dramatically improve operational automation
+• Use SD-WAN features to perform simple, agile, and secure SD-WAN operations
+• Simplify branch infrastructure by inserting network services on the branch edge, in the cloud, or in the
+regional and enterprise data centers
+
+**Target Audience**
+Experienced system administrators, network administrators, and system integrators responsible for designing and implementing networking solutions.
+
+**Prerequisites**
+Strong knowledge of routing and switching is required."
+fk9hbr,You can try the VeloCloud labs at [hol.vmware.com](https://hol.vmware.com) search for velocloud
+fk9hbr,works well. thx
+ezxgq3,"Hi, yes there is a ssh Server running in the VCE."
+ezxgq3,"You can SSH to the edge before activation, yes, however SSH access to the device is currently not supported and should not be done by anyone but the vendor (VMWare)"
+ezxgq3,"I was trying to modify /etc/ssh/sshd\_config , but i think IP TABLES are blocking SSH"
+ezxgq3,Before activation?
+ezxgq3,Yes. For automating login pre activation.
